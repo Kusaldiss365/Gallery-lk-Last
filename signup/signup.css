@@ -1,0 +1,79 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+    padding: 0;
+    background-image: url("../Src/2.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.signuppage{
+    width: 400px;
+    height: 800px;
+    border: 4px solid rgb(0, 0, 0);
+    background:rgba(255, 255, 255, 0.7);
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-40%);
+    box-sizing:border-box;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.backbtn{
+    padding: 10px 0 0 0px;
+}
+h1{
+    text-align: center;
+    margin: 0;
+    padding:10px 0 30px;
+}
+
+.signuppage p{
+    margin: 0;
+    padding: 0 0 0 20px;
+    font-weight: bold;
+}
+
+.signuppage input{
+    width:90%;
+    margin-bottom: 20px;
+}
+
+.firstname, .lastname, .phonenumber, .username, .email, .password{
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    height: 40px;
+}
+
+.signuppage input[type="submit"]{
+    border: none;
+    outline: none;
+    margin: 20px 20px 20px 20px;
+    height: 30px;
+    background-color: #ff4646;
+    color:aliceblue;
+    border-radius: 10px;
+}
+
+.signuppage input[type="submit"]:hover{
+    cursor: pointer;
+    background:#ff0000;
+    color:black;
+}
+.signuppage a{
+    text-decoration: none;
+    margin: 0 20px 0 22px;
+    line-height: 20px;
+}
+
+.signuppage a:hover{
+    color:rgb(0, 18, 175);
+}
+.invalid-feedback{
+    font-size: 15px;
+    color: rgb(152, 153, 153) solid;
+
+}

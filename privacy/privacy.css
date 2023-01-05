@@ -1,0 +1,49 @@
+body{
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: url(../Src/ssss.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: 100% 110vh;
+}
+
+.terms-box{
+  max-width: 460px;
+  background-color: antiquewhite;
+  border: 2px solid rgb(82, 16, 16);
+  font-family: "Montserrat";
+  padding: 30px 60px ;
+}
+
+.terms-text{
+
+  padding: 0 20px;
+  height: 400px;
+  overflow-y: auto;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: rgba(240, 248, 255, 0.76);
+  border: 2px solid rgb(82, 16, 16);
+}
+
+
+
+.terms-box h2{
+  text-transform: uppercase;
+  color:rgb(82, 16, 16);
+  font-size:28px;
+  font-family:URW Chancery L, cursive;
+}
+
+.terms-box h4{
+  font-size: 20px;
+  text-align: center;
+  padding: 0 40px;
+}
+p{
+	font-size:18px;
+}
