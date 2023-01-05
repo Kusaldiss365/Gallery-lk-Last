@@ -1,0 +1,53 @@
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+}
+.section{
+	width:100%;
+	
+}
+.section .container{
+	width:80%;
+	display:block;
+	margin:0px auto;
+	padding:50px 0px;
+}
+.container .title{
+	width:100%;
+	text-align:center;
+	margin-bottom:80px;
+	text-transform:uppercase;
+	font-size:30px;
+	color:#000066;
+	font-family: URW Chancery L, cursive;
+}
+.content{
+	float:left;
+	width:50%;
+}
+.img-section{
+	float:right;
+	width:40%;
+}
+.img-section img {
+	width:100%;
+	height:auto;
+	
+}
+ h4{
+	color:#00001a;
+	font-size:17px;
+	line-height:1.5;
+	font-family:American Typewriter, serif;
+}
+ p{
+	color: #333300;
+	font-size:16px;
+	margin-top:20px;
+	line-height:1.5;
+	font-family:Gill Sans, sans-serif;
+
+}
+
+

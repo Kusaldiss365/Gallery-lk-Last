@@ -1,0 +1,80 @@
+body{
+	margin:0;
+	padding:0;
+	font-family: 'Montserrat', sans-serif;
+
+	box-sizing: border-box;
+}
+
+.searchbar{
+	color:white;
+	font-size: 12px;
+	padding:15px 0 20px 280px;
+}
+
+.searchbar input[type="text"]{
+	width: 500px;
+	height: 25px;
+	margin: 0 0 0 6px;
+}
+
+.searchbtn{
+	background: rgb(145, 77, 77);
+	border-radius: 6px;
+}
+.sidemenu{
+	height: 370px;
+	width: 250px;
+	position:absolute;
+	background-color: rgb(206, 174, 88);
+	z-index: 1;
+	transition: 0.5s ease;
+	transform: translateX(0);
+	border-radius: 5px;
+	margin-top: 15px;
+}
+
+.heading{
+	color: black;
+	font-size: 25px;
+	font-weight: bold;
+	padding: 30px 30px 10px 30px ;
+	text-align: center;
+}
+
+.sidemenu li{
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	list-style: none;
+	display: block;
+	text-align: center;
+	padding: 10px 35px 10px 0;
+}
+
+.sidemenu li:hover{
+	background: rgb(146, 182, 189);
+	letter-spacing: 1px;
+	transition: all;
+	cursor: pointer;
+}
+
+.adsrow1{
+	display: flex;
+	position: absolute;
+	justify-content: space-between;
+}
+
+#ad_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#ad_container div{
+		padding: 3rem;
+		background: rgb(255, 255, 255);
+		margin: 0.5rem;
+		border-radius: 10px;
+		color: #fff;
+		font-size: 1.2rem;
+		text-align: center;
+	}

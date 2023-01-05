@@ -1,0 +1,161 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	min-height: 100vh;
+	min-width: 100vw;
+
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.logo {
+	margin-right:760px;
+	margin-left: 2px;
+	
+}
+
+.main-nav {
+	margin-top: 0px;
+	display: flex;
+	justify-content: right;
+	align-items: flex-end;
+}
+.logo a,.main-nav a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+.main-nav a {
+
+	color:rgb(37, 0, 0);
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.main-nav a:hover {
+	color: #ca0000;
+}
+.dropbtn {
+    background-color: transparent;
+	margin: 10px;
+    padding: 0px;
+    width: 50px;
+	margin-right: 50px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+ 
+  .dropdown1 {
+    display: none;
+    position: absolute;
+    background-color: rgb(223, 148, 79);
+    font-size: 15px;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(218, 218, 218, 0.2);
+    z-index: 1;
+	border-radius: 5px;
+  }
+  
+
+  .dropdown1 a {
+    color:#dfab68;
+
+    padding: 0px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown1 a:hover {
+	background-color: #e98383
+}
+  
+  
+  .dropdown:hover .dropdown1 {
+    display: block;
+  }
+
+
+.header {	
+	display: flex;
+	justify-content: right;
+	align-items: flex-end;
+	width: 100vw;
+	height: 70px;
+
+	
+}
+
+p{
+	color: rgb(0, 0, 0);
+	font-size: 20px;
+	padding-left: 10px;
+}
+.body{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+	background-image: linear-gradient(rgb(124, 53, 53), rgb(255, 255, 255));
+	height:100vh;
+}
+
+.accordion
+{
+	max-width:1000px;
+	
+}
+.accordion .contentbx{
+	position:relative;
+	margin:10px 20px;
+	
+}
+.accordion .contentbx .label{
+	position:relative;
+	padding:10px;
+	background:#fcd29b;
+	color:black;
+	cursor:pointer;
+	font-size:24px;
+	
+}
+.accordion .contentbx .label::before{
+	content: "+";
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform:translateY(-50%);
+	font-size:1.5em;
+	
+}
+.accordion .contentbx.active .label::before{
+	content: "-";
+}
+.accordion .contentbx .content{
+	position:relative;
+	background:rgba(244, 247, 230, 0.575);
+	height:0;
+	overflow:hidden;
+	transition: 0.5s;
+	overflow-y:auto;
+	font-size:20px;
+}
+.accordion .contentbx.active .content{
+	height:150px;
+	padding:10px;
+	
+}
