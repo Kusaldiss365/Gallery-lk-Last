@@ -48,7 +48,7 @@
                                 <th > Status</th>
                             </tr>
                             <tr>
-                                <td >Kusaldiss</td>
+                                <td >Kusal</td>
                                 <td >
                                     <div> 
                                        <button type="submit"  class ="button button1"><a class="link" href="../contact_admins/conadd1.php">Contact Admin </a></button>
@@ -70,7 +70,7 @@
     
                             </tr>
                             <tr>
-                                <td >Sadundiss</td>
+                                <td >Sadun</td>
                                 <td >
                                     <div> 
                                        <button type="submit" class ="button button1"><a class="link" href="../contact_admins/conadd3.php">Contact Admin </a></button>
