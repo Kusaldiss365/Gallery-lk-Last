@@ -3,6 +3,6 @@
 $dbServername = "localhost";
 $dbUsername = "root";
 $dbPassword = "";
-$dbName = "gallerylk";
+$dbName = "register";
 
 $conn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
