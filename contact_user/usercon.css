@@ -1,0 +1,33 @@
+
+.main-nav{
+    background-color: rgb(112, 242, 77);
+    border: 10px solid black;
+}
+.custom-btn{
+    font-size:20px;
+    border: none;
+    outline: none;
+    margin: 20px 10px 20px 10px;
+    height: 40px;
+    background-color: #1a1adc;
+    border-radius: 20px;
+    width: 150px;
+}
+.form-control{
+    width: 600px;
+}
+.dropdown-menu{
+    width: 100px;
+}
+.form-border{
+    width: 1000px;
+    height: 600px;
+}
+.search-bar{
+    border: 2px solid #ff4646;
+    height: 40px;
+}
+.card{
+    width: 700px;
+
+}	
