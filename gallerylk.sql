@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 07, 2023 at 10:57 AM
+-- Generation Time: Jan 08, 2023 at 04:18 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -41,7 +41,10 @@ CREATE TABLE `ads` (
 --
 
 INSERT INTO `ads` (`ad_id`, `adName`, `category`, `ad_desc`, `img_dir`, `price`) VALUES
-(33, 'Night Time', 'Drawing', 'Walking at night', '../uploads/63b6faf6a73628.24244295.jpg', 3000);
+(34, 'Warrior', 'Sculptures', 'Roman Warrior', '../uploads/63bac1b0f017e6.95408376.jpg', 3000),
+(35, 'Eye', 'Drawing', 'Drawing of an Eye', '../uploads/63bac1ef93cc34.43128920.jpg', 1000),
+(36, 'Hand Drawn', 'Photographs', 'Photo of drawings', '../uploads/63bacc6f7c2206.82762800.jpeg', 500),
+(37, 'Race Car', 'Photographs', 'Photo of a race car', '../uploads/63baccae90b6e4.48726636.jpg', 800);
 
 -- --------------------------------------------------------
 
@@ -100,6 +103,30 @@ INSERT INTO `postads` (`ad_id`, `ad_name`, `category`, `ad_description`, `price`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `userdetails`
+--
+
+CREATE TABLE `userdetails` (
+  `user_id` int(10) NOT NULL,
+  `firstname` varchar(200) NOT NULL,
+  `lastname` varchar(200) NOT NULL,
+  `username` varchar(200) NOT NULL,
+  `phonenumber` varchar(50) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `password` varchar(200) NOT NULL,
+  `usertype` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `userdetails`
+--
+
+INSERT INTO `userdetails` (`user_id`, `firstname`, `lastname`, `username`, `phonenumber`, `email`, `password`, `usertype`) VALUES
+(1, 'kusal', 'dissanayake', 'kusal22', '0768871660', 'kusaldissanayake2@gmail.com', 'Kusal123', 0);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -143,6 +170,12 @@ ALTER TABLE `postads`
   ADD PRIMARY KEY (`ad_id`);
 
 --
+-- Indexes for table `userdetails`
+--
+ALTER TABLE `userdetails`
+  ADD PRIMARY KEY (`user_id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -159,7 +192,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `ads`
 --
 ALTER TABLE `ads`
-  MODIFY `ad_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `ad_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `complaints`
@@ -172,6 +205,12 @@ ALTER TABLE `complaints`
 --
 ALTER TABLE `postads`
   MODIFY `ad_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `userdetails`
+--
+ALTER TABLE `userdetails`
+  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
