@@ -36,7 +36,7 @@ if(in_array($fileActualExt, $allowed)){
         $id = $_POST['ad_id'];
 
         $sql = "UPDATE ads SET adName='$adName', category='$category',ad_desc='$ad_desc',img_dir='$fileDestination1',price='$price' WHERE ad_id='$id'";
-        $conn = mysqli_connect('localhost','root','','register');
+        $conn = mysqli_connect('localhost','root','','gallerylk');
         mysqli_query($conn, $sql);
         
         header("Location: ./myads.php");

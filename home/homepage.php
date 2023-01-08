@@ -36,7 +36,9 @@
                 </ul> 
                 </div>
             </nav>
-            <div class="row">
+
+    <div class="container fluid">
+    <div class="row">
                 <?php
                         require "../post_ads/db.php";
 
@@ -48,9 +50,7 @@
                             while($row = mysqli_fetch_assoc($query_run)){
                 ?>
                 
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="container">
+                <div class="col-md-4 py-5">
                             <div class="card" style="width:350px">
                                 <img src="<?php echo $row['img_dir'];?>" width="300px" height="200px" class="card-img-top" alt="Product Image">
                                     <div class="card-body py-4">
@@ -63,10 +63,9 @@
                                         <a href="#" class="btn btn-primary w-20 p-1">Contact Seller</a>
                                         </div>
                                         </p>
-                        </div>
-                    </div>
-                </div>
+                                    </div>
                             </div>
+                </div>
                 <?php
                             
                             }
@@ -75,9 +74,9 @@
                             echo "No Ads Found";
                         }
                         ?>
-            </div>
-        
- 
+    </div>
+    </div>
+    </div>
 
         <div class="bottom absolute-bottom">
                     |<a href="../about us/about.php">About us</a>|

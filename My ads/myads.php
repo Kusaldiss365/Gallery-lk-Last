@@ -46,7 +46,7 @@
                 </div>
 
                 <?php 
-                $conn = mysqli_connect('localhost','root','','register');
+                $conn = mysqli_connect('localhost','root','','gallerylk');
                 $sql = "SELECT * FROM ads";
                 $result = $conn->query($sql);
                 while($row = $result->fetch_assoc()) {?>

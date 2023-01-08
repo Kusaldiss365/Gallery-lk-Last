@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../post ads/post.css">
+    <link rel="stylesheet" href="../post_ads/post.css">
 
 
     <title>post an Ad</title>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="box1">
                     <?php
-                    $conn = mysqli_connect('localhost','root','','register');
+                    $conn = mysqli_connect('localhost','root','','gallerylk');
                     $sql = "SELECT * FROM ads WHERE ad_id=" . $_GET['id'];
                     $result = $conn->query($sql);
                     $row = $result->fetch_assoc();
