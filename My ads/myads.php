@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="my ads.css">
+    <link rel="stylesheet" href="myads.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
@@ -37,7 +37,13 @@
             </ul>
         </div>
         <div class="profile">
-        Logged in as <?php echo $_SESSION['firstname']; ?>
+        <?php
+        if (isset($_SESSION['firstname'])) {
+            echo "Logged in as";
+             echo $_SESSION['firstname']; 
+                                    }
+                                    ?>
+        
         </div>
         <div class="body">
             <div class="inner">
@@ -54,7 +60,13 @@
                 <div class="box1">
                     <div class="image"><img src="../post ads/<?php echo $row['img_dir'];?>" alt="" class="itms"></div>
                     <div class="text">
-                        <b><?php echo $row['ad_id'];?></b><br><b>Category:</b><?php echo $row['category'];?><br><b>Price:</b>Rs.<?php echo $row['price'];?>.00
+                        <b><?php 
+                        echo "Name : ";
+                        echo $row['adName'];
+                        echo "<br>";
+                        echo "ID : ";
+                        echo $row['ad_id'];?>
+                        </b><br><b>Category:</b><?php echo $row['category'];?><br><b>Price:</b>Rs.<?php echo $row['price'];?>.00
                     </div>
                     <div class="btn">
                         <div class="btn1"><a href="./post.php?id=<?php echo $row['ad_id'];?>&action=edit"

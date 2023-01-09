@@ -30,7 +30,7 @@ if (isset($_POST['save'])) {
 
 <body>
         <div class="nav-bar">
-            <div class="logo"><a href="../home/homepage.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></div>
+            <div class="logo"><a href="../home/homepage.php"><img src="../Src/Logo.png" width="60px" height="60px"></a></div>
             <form class="form-horizontal" action="../home/homepage_copy.php" method="post">
             <div class="row search-bar">
                 <div class="form-group">
@@ -78,16 +78,6 @@ if (isset($_POST['save'])) {
         </div>
     </nav>
 
-    <div class="test">
-        <?php
-        if (isset($_SESSION['firstname'])) {
-            echo "Logged in as ";
-            echo $_SESSION['firstname'];
-        }
-
-        ?>
-    </div>
-
     <div class="container fluid">
         <div class="row">
             <?php
@@ -108,15 +98,30 @@ if (isset($_POST['save'])) {
                                 <h2 class="ad_title"><?php echo $row['adName'];  ?></h2>
                                 <h5 class="ad_title"><?php echo $row['category'];  ?></h5>
                                 <p class="content">
-                                    <?php echo $row['ad_desc'];  ?>
+                                    <?php echo 'ID: ';
+                                    echo $row['ad_id'];
+                                    echo "<br>";
+                                    echo $row['ad_desc'];  ?>
                                 <div class="card-footer bg-transparent border-black">
-                                    <!-- <a href="../Favourites/fav.php" class="btn btn-warning w-15 p-1">Add to Favoriutes</a> -->
-                                    <form action="../Favourites/FA.php" method="POST">
+                                <?php
+                                    if (isset($_SESSION['firstname'])) {
+                                        echo '<form action="../Favourites/FA.php" method="POST">';
+                                        echo '<input type="hidden" name="user_id" value="';
+                                        echo ($_SESSION['user_id']);
+                                        echo '">';
+                                        echo '<input type="hidden" name="ad_id" value="';
+                                        echo $row['ad_id'];
+                                        echo '">';
+                                        echo '<input type="submit" class="btn btn-warning w-15 p-1 b-2" value="Add to favorites">';
+                                        echo '</form>';
+                                    }
+                                    ?>
+                                    <!-- <form action="../Favourites/FA.php" method="POST">
                                         <input type="hidden" name="user_id" value="<?php echo ($_SESSION['user_id']);?>">
                                         <input type="hidden" name="ad_id" value="<?php echo $row['ad_id'];  ?>">
-                                        <input type="submit" value="Add fav"></button>
-                                    </form>
-                                    <a href="#" class="btn btn-primary w-20 p-1">Contact Seller</a>
+                                        <input type="submit" class="btn btn-warning w-15 mb-1" value="Add to favorites">
+                                    </form> -->
+                                    <a href="../Seller_details/Seller_details.php" class="btn btn-primary w-24 p-1 b-2">Contact Seller</a>
                                 </div>
                                 </p>
                             </div>
