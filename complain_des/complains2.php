@@ -41,7 +41,7 @@
             <input type="text" name="id" class="id"><br><br>
             Complain content
             <textarea name="message" rows="20" cols="50"> </textarea> <br>
-            <input type="submit" value="SEND">
+            <input type="submit" value="SEND>
 
         </form>
     </div>
