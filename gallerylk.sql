@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 08, 2023 at 04:18 PM
+-- Generation Time: Jan 09, 2023 at 06:30 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -33,18 +33,20 @@ CREATE TABLE `ads` (
   `category` varchar(50) NOT NULL,
   `ad_desc` varchar(500) NOT NULL,
   `img_dir` varchar(256) NOT NULL,
-  `price` int(100) NOT NULL
+  `price` int(100) NOT NULL,
+  `user_id` int(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `ads`
 --
 
-INSERT INTO `ads` (`ad_id`, `adName`, `category`, `ad_desc`, `img_dir`, `price`) VALUES
-(34, 'Warrior', 'Sculptures', 'Roman Warrior', '../uploads/63bac1b0f017e6.95408376.jpg', 3000),
-(35, 'Eye', 'Drawing', 'Drawing of an Eye', '../uploads/63bac1ef93cc34.43128920.jpg', 1000),
-(36, 'Hand Drawn', 'Photographs', 'Photo of drawings', '../uploads/63bacc6f7c2206.82762800.jpeg', 500),
-(37, 'Race Car', 'Photographs', 'Photo of a race car', '../uploads/63baccae90b6e4.48726636.jpg', 800);
+INSERT INTO `ads` (`ad_id`, `adName`, `category`, `ad_desc`, `img_dir`, `price`, `user_id`) VALUES
+(34, 'Warrior', 'Sculptures', 'Roman Warrior', '../uploads/63bac1b0f017e6.95408376.jpg', 3000, NULL),
+(35, 'Eye', 'Drawing', 'Drawing of an Eye', '../uploads/63bac1ef93cc34.43128920.jpg', 1000, NULL),
+(36, 'Hand Drawn', 'Photographs', 'Photo of drawings', '../uploads/63bacc6f7c2206.82762800.jpeg', 500, NULL),
+(37, 'Race Car', 'Photographs', 'Photo of a race car', '../uploads/63baccae90b6e4.48726636.jpg', 800, NULL),
+(38, 'Race Car 2', 'Photographs', 'Cars', '../uploads/63bb8e2c867a27.49361414.jpg', 2000, NULL);
 
 -- --------------------------------------------------------
 
@@ -122,7 +124,8 @@ CREATE TABLE `userdetails` (
 --
 
 INSERT INTO `userdetails` (`user_id`, `firstname`, `lastname`, `username`, `phonenumber`, `email`, `password`, `usertype`) VALUES
-(1, 'kusal', 'dissanayake', 'kusal22', '0768871660', 'kusaldissanayake2@gmail.com', 'Kusal123', 0);
+(1, 'kusal', 'dissanayake', 'kusal22', '0768871660', 'kusaldissanayake2@gmail.com', 'Kusal123', 0),
+(2, 'Sandun', 'Perera', 'Sandun1', '0768871690', 'sandunper@gmail.com', 'Sandun123', 0);
 
 -- --------------------------------------------------------
 
@@ -155,7 +158,8 @@ INSERT INTO `users` (`userId`, `userName`, `firstName`, `lastName`, `PhoneNumber
 -- Indexes for table `ads`
 --
 ALTER TABLE `ads`
-  ADD PRIMARY KEY (`ad_id`);
+  ADD PRIMARY KEY (`ad_id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `complaints`
@@ -192,7 +196,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `ads`
 --
 ALTER TABLE `ads`
-  MODIFY `ad_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `ad_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `complaints`
@@ -210,13 +214,23 @@ ALTER TABLE `postads`
 -- AUTO_INCREMENT for table `userdetails`
 --
 ALTER TABLE `userdetails`
-  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `ads`
+--
+ALTER TABLE `ads`
+  ADD CONSTRAINT `ads_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `userdetails` (`user_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
