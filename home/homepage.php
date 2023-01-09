@@ -31,10 +31,14 @@ if (isset($_POST['save'])) {
 <body>
         <div class="nav-bar">
             <div class="logo"><a href="../home/homepage.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></div>
-            <div class="search-bar">
-                <input type="text" placeholder="Search Here" class="search-box">
-                <button type="submit" class="search-btn">search</button>
+            <form class="form-horizontal" action="../home/homepage_copy.php" method="post">
+            <div class="row search-bar">
+                <div class="form-group">
+                    <input type="text" class="search-box" name="search" placeholder="search here">
+                    <button type="submit" name="save" class="search-btn"> Search</button>
+                </div>
             </div>
+        </form>
             <div class="buttons">
                 <?php
                 if (isset($_SESSION['firstname'])) {
