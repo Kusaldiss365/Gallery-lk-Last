@@ -67,13 +67,13 @@ if (isset($_POST['save'])) {
             </button>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                <li><a class="nav-item" href="#artist">All</a></li><label for="">|</label>
-                <li><a class="nav-item" href="#home">Paintings</a></li><label for="">|</label>
-                <li><a class="nav-item" href="#artist">Drawings</a></li><label for="">|</label>
-                <li><a class="nav-item" href="#sellers">Handcrafts</a></li><label for="">|</label>
-                <li><a class="nav-item" href="#contactus">Sculptures</a></li><label for="">|</label>
-                <li><a class="nav-item" href="#about">Photographs</a></li><label for="">|</label>
-                <li><a class="nav-item" href="#about">Papercuts</a></li>
+                <li><a class="nav-item" href="../home/homepage.php">All</a></li><label for="">|</label>
+                <li><a class="nav-item" href="../home/Paintings.php">Paintings</a></li><label for="">|</label>
+                <li><a class="nav-item" href="../home/Drawings.php">Drawings</a></li><label for="">|</label>
+                <li><a class="nav-item" href="../home/Handcrafts.php">Handcrafts</a></li><label for="">|</label>
+                <li><a class="nav-item" href="../home/Sculptures.php">Sculptures</a></li><label for="">|</label>
+                <li><a class="nav-item" href="../home/Photographs.php">Photographs</a></li><label for="">|</label>
+                <li><a class="nav-item" href="../home/Papercuts.php">Papercuts</a></li>
             </ul>
         </div>
     </nav>
@@ -127,38 +127,15 @@ if (isset($_POST['save'])) {
         </div>
     </div>
     </div>
-    <aside style="width:50%;">
-        <div class="table-responsive" style="padding: 0 100px;">
-            <table class="table" style="width: 600px;">
-                <tbody>
-                    <?php
-                    if (!$employee_details) {
-                    } else {
-                        foreach ($employee_details as $key => $value) {
-                    ?>
-                            <tr>
-                                <td><?php echo $value['adName']; ?></td>
-                                <td><?php echo $value['category']; ?></td>
-                                <td><img src="<?php echo "." . $value['img_dir']; ?>"></td>
-                            </tr>
-
-                    <?php
-                        }
-                    }
-                    ?>
-
-                </tbody>
-            </table>
-        </div>
-    </aside>
-    <div class="bottom absolute-bottom">
+    
+    
+    </div>
+    <div class="bottom absolute-bottom" >
         |<a href="../about us/about.php">About us</a>|
         <a href="../contact/index.html">Contact us </a>|
         <a href="../privacy/privacy.php">Privacy & Policy</a>|
         <a href="../help/help.php">Help</a>|
     </div>
-    </div>
-
 <script>
     function logout(){
         if(confirm("Do you want to logout?")){

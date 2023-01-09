@@ -248,6 +248,9 @@ li a:hover{
     display: block;
   }
 .bottom{
+    align-items: center;
+    align-self: center;
+    align-content: center;
     color: rgb(181, 185, 189);
 }
 .bottom a{
@@ -258,9 +261,10 @@ li a:hover{
     text-decoration: none;
     margin-bottom: 10px;
     padding: 10px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
+
 .bottom a:hover{
-    color: rgb(255, 170, 170);
+    color: rgb(82, 31, 31);
 }
 /*-----------------------navigation items ends-------------------*/

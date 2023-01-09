@@ -2,18 +2,20 @@
 include 'config.php';
 $searchErr = '';
 $employee_details = '';
-if (isset($_POST['save'])) {
-    if (!empty($_POST['search'])) {
-        $search = $_POST['search'];
+
+    
+        $search = 'Photographs';
+        #$stmt = $con->prepare("SELECT * FROM ads WHERE (`category` = 'Photographs') ");
         $stmt = $con->prepare("SELECT * FROM ads WHERE (`category` LIKE '%" . $search . "%') ");
+
         $stmt->execute();
         $employee_details = $stmt->fetchAll(PDO::FETCH_ASSOC);
         //print_r($employee_details);
 
-    } else {
-        $searchErr = "Please enter the information";
-    }
-}
+    
+    //    $searchErr = "Please enter the information";
+    
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
