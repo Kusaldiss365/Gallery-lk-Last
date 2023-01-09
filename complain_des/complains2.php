@@ -15,7 +15,7 @@
         <h1 class="logo"><a href="../home/home.php"><img src="../Src/Logo.png" width="50px" height="50px"
                     width="20px"></a></h1>
         <ul class="main-nav">
-            <li><a href="#">Home</a></li>
+            <li><a href="../home/homepage.php">Home</a></li>
             <li><a href="#">My Account</a></li>
             <li><a href="#">Customer Care</a></li>
             <li>

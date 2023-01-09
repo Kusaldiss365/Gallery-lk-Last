@@ -20,7 +20,21 @@
             <div class="buttons">
                 <button class="login"><a href = "../Login/login.php" >Login</a></button>
                 <button class="register"><a href = "../signup/signup.php">Register</a></button>
-                <button class="useracc" target=""><a href="../User/user.php">My Account</a></button>
+                <?php
+                if (isset($_SESSION['firstname'])) {
+                    echo '<button class="useracc" style="color:blue; text-decoration:none;"><a href="../User/user.php">My Account</a></button>';
+                }
+                   
+                ?>
+                <button class="dropbtn"><img src="../Src/setting.png" width="25px"></button>
+                <div class="dropdown1">
+                        <a href="#">ss</a>
+                        <a href="#">1</a>
+                        <a href="#">3</a>
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                </div>
             </div>
             </div>
 
@@ -41,7 +55,13 @@
             </nav>
 
             <div class="test">
-                Logged in as <?php echo $_SESSION['firstname']; ?>
+                <?php
+                if (isset($_SESSION['firstname'])) {
+                    echo "Logged in as ";
+                    echo $_SESSION['firstname']; 
+                }
+                
+                ?>
             </div>
 
     <div class="container fluid">
