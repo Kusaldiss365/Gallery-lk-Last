@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Seller_details.css">
-    <title>Document</title>
+    <title>Seller Details</title>
 </head>
 <body>
+<?php
+include '../config.php';
+
+$select1 = " SELECT * FROM ads WHERE user_id = '{$userId}'";
+$result = mysqli_query($conn, $select);
+
+if(mysqli_num_rows($result) == 1){
+    $user = mysqli_fetch_assoc($result);
+    $_SESSION['userid'] = $user['user_id'];}
+?>
 <div class="outer">
         <div class="header">
             <h1 class="logo"><a href="../home/home.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></h1>
@@ -31,31 +42,53 @@
             </ul>
         </div>
         <div class="profile">
-            <img class="pic" src="../Src/user2.png">
-            <p class="uname">Sandundiss</p>
+            
+            <?php
+            if (isset($_SESSION['firstname'])) {
+               echo  '<img class="pic" src="../Src/user2.png">';
+                echo "Logged in as";
+                echo $_SESSION['firstname'];}
+            ?>
         </div>
+            <div class="Sellerdiv">
+                <form action="">
+                <table>
                         <tr>    
-                                <th>Seller Name: </th>
-                                <td><input type="text" name="sellerName"></td>
-                            </div>
+                                <th>Ad Name  </th>
+                                <td></td>
+                                <td><input type="text" class="inputs" name="sellerName"></td>
                        </tr>
+                        <tr>    
+                                <th>Seller Name </th>
+                                <td></td>
+                                <td><input type="text" class="inputs" name="sellerName"></td>
+                       </tr>
+                       <tr></tr>
+                       <tr></tr>
                         <tr>
-                                <th>Phone Number: </th>
-                                <td><input type="text" name="phone"></td>
+                                <th>Phone Number  </th>
+                                <td></td>
+                                <td><input type="text" class="inputs" name="phone"></td>
                         </tr>
+                        <tr></tr>
+                        <tr></tr>   
                         <tr>
-                                <th>Email: </th>
-                                <td><input type="text" name="email"></td>
-                            </tr>
-                            <tr>
-                            <td>
-                            </td>
-                            <td>
-                            <div class="back">
-                            <input type="submit" name="submit" value="Back" class="postbtn">
-                            </div>
-                            </table>
-                </div>
-                
+                                <th>Email   </th>
+                                <td></td>
+                                <td><input type="text" class="inputs" name="email"></td>
+                        </tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr><td></td><td></td><td></td>
+                        <td>
+                        <button class="backbtn"><a href="../home/homepage.php">Back</a></button></td></tr>
+                </table>
+                </form>
+            </div>
+
+
 </body>
 </html>

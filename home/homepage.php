@@ -78,7 +78,7 @@ if (isset($_POST['save'])) {
         </div>
     </nav>
 
-    <div class="container fluid">
+    <div class="container fluid" id="cardcontainer">
         <div class="row">
             <?php
             require "../post_ads/db.php";

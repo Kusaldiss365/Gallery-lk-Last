@@ -267,5 +267,10 @@ li a:hover{
 
 .bottom a:hover{
     color: rgb(82, 31, 31);
+
 }
+
+.card:hover{  
+box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
+transform: translate3d(0px, -1px, 0px);}
 /*-----------------------navigation items ends-------------------*/

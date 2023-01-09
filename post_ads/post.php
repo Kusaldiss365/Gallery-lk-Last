@@ -55,7 +55,7 @@
                 <div class="box1">
 
                     <form action="postad.php" method="post" class="form" enctype="multipart/form-data"
-                        target="./success.html">
+                        target="../User/user.php">
                         <table>
                             <tr>
                                 <th>
