@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,8 +37,7 @@
             </ul>
         </div>
         <div class="profile">
-            <img class="pic" src="../Src/user2.png">
-            <p class="uname">Sandundiss</p>
+        Logged in as <?php echo $_SESSION['firstname']; ?>
         </div>
         <div class="body">
             <div class="inner">

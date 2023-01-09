@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="homepage.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="homepage.css">
     <title>Home</title>
 </head>
 <body>
@@ -18,6 +20,7 @@
             <div class="buttons">
                 <button class="login"><a href = "../Login/login.php" >Login</a></button>
                 <button class="register"><a href = "../signup/signup.php">Register</a></button>
+                <button class="useracc" target=""><a href="../User/user.php">My Account</a></button>
             </div>
             </div>
 
@@ -36,6 +39,10 @@
                 </ul> 
                 </div>
             </nav>
+
+            <div class="test">
+                Logged in as <?php echo $_SESSION['firstname']; ?>
+            </div>
 
     <div class="container fluid">
     <div class="row">
@@ -59,7 +66,7 @@
                                         <p class="content">
                                         <?php  echo $row['ad_desc'];  ?>
                                         <div class="card-footer bg-transparent border-black">
-                                        <a href="#" class="btn btn-warning w-15 p-1">Add to Favoriutes</a>
+                                        <a href="../Favourites/fav.php" class="btn btn-warning w-15 p-1">Add to Favoriutes</a>
                                         <a href="#" class="btn btn-primary w-20 p-1">Contact Seller</a>
                                         </div>
                                         </p>

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,11 +13,14 @@
 </head>
 
 <body>
+    <?php
+    echo $_SESSION['user_id']; 
+    ?>
     <div class="outer">
         <div class="header">
-            <h1 class="logo"><a href="../home/home.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></h1>
+            <h1 class="logo"><a href="../home/homepage.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></h1>
             <ul class="main-nav">
-                <li><a href="../home/home.php">Home</a></li>
+                <li><a href="../home/homepage.php">Home</a></li>
                 <li><a href="#">My Account</a></li>
                 <li><a href="#">Customer Care</a></li>
                 <li>
@@ -36,7 +40,7 @@
         </div>
         <div class="profile">
             <img class="pic" src="../Src/user2.png">
-            <p class="uname">Sandundiss</p>
+            <p class="uname">Logged in as <?php echo $_SESSION['firstname']; ?></p>
         </div>
         <div class="body">
             <div class="inner">

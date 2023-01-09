@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +13,9 @@
 <body >
     <div class="outer">
         <div class="header">
-                <h1 class="logo"><a href="../home/home.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></h1>
+                <h1 class="logo"><a href="../home/homepage.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></h1>
             <ul class="main-nav">
-                <li><a href="../home/home.php">Home</a></li>
+                <li><a href="../home/homepage.php">Home</a></li>
                 <li><a href="#">My Account</a></li>
                 <li><a href="#">Customer Care</a></li>
                 <li><div class="dropdown">
@@ -31,7 +32,9 @@
         </div> 
         <div class="profile">
             <img class="pic" src="../Src/user2.png">
-            <p class="uname">KAVEE</p>
+            <p class="uname">
+        Logged in as <?php echo $_SESSION['firstname']; ?>
+        </p>
         </div>
             <div class="body">
                 <div class="inne">
@@ -45,7 +48,7 @@
                         <div class="box">
                             <button type="button">
                             <div class="image"><img src="../Src/add.png" alt="add" class="tip"></div>
-                            <div class="text"><a href="../post ads/post.php">Add Post</a></div>
+                            <div class="text"><a href="../post_ads/post.php">Post Ads</a></div>
                             </button>
                         </div>
                         <div class="box">
