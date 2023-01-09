@@ -72,12 +72,12 @@
     <div class="container">
         <div class="row">
             <div class="col user-details d-flex justify-content-center align-items-center flex-column mt-0">
-                <div class="form-border d-flex justify-content-center align-items-center flex-column shadow-lg p-3 mb-5 bg-body rounded">
+                <div class="form-border d-flex justify-content-center align-items-center flex-column shadow-lg p-3 mb-5 bg-body rounded" style="width: 400px">
                     <div class="row">
                         <div class="col-12">
                             <div class="mb-1">
-                                <label for="user_name" class="form-label fw-bold ">User Name</label>
-                                <div class="card py-0 px-2">
+                                <label for="user_name" class="form-label fw-bold ">User Id</label>
+                                <div class="card py-2 px-2" style="width: 300px;">
                                     <div class="card-body " id="usernameid">
                                     </div>
                                 </div>
@@ -88,7 +88,7 @@
                         <div class="col-12">
                             <div class="mb-1">
                                 <label for="user_name" class="form-label fw-bold ">First Name</label>
-                                <div class="card py-0 px-2">
+                                <div class="card py-2 px-2" style="width: 300px;">
                                     <div class="card-body " id="firstNameID">
 
                                     </div>
@@ -100,7 +100,7 @@
                         <div class="col-12">
                             <div class="mb-1">
                                 <label for="user_name" class="form-label fw-bold ">Last Name</label>
-                                <div class="card py-0 px-2">
+                                <div class="card py-2 px-2" style="width: 300px;">
                                     <div class="card-body " id="lastNameID">
 
                                     </div>
@@ -112,7 +112,7 @@
                         <div class="col-12">
                             <div class="mb-1">
                                 <label for="user_name" class="form-label fw-bold ">Mobile Number</label>
-                                <div class="card py-0 px-2">
+                                <div class="card py-2 px-2" style="width: 300px;">
                                     <div class="card-body " id="mobileNumberID">
 
                                     </div>
@@ -179,9 +179,9 @@
         var isFound = true;
         filter = input.value.toLowerCase();
         for (i = 0; i < tabledata.length; i++) {
-            if (  (tabledata[i].userId === filter ) || (tabledata[i].firstName.toLowerCase().includes(filter)) ) {
+            if (  (tabledata[i].userId === filter ) || (tabledata[i].userName.toLowerCase().includes(filter)) ) {
                 isFound = false;
-                document.getElementById("usernameid").innerText = tabledata[i].userName
+                document.getElementById("usernameid").innerText = tabledata[i].userId
                 document.getElementById("firstNameID").innerText = tabledata[i].firstName
                 document.getElementById("lastNameID").innerText = tabledata[i].lastName
                 document.getElementById("mobileNumberID").innerText = tabledata[i].PhoneNumber
