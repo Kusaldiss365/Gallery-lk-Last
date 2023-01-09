@@ -14,8 +14,10 @@ session_destroy();
 
 header("Location: ../home/homepage.php");
 die();
+
 ?>
 user log out
+
 </body>
 </html>
 

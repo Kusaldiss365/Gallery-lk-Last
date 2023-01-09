@@ -13,9 +13,6 @@
 </head>
 
 <body>
-    <?php
-    echo $_SESSION['user_id']; 
-    ?>
     <div class="outer">
         <div class="header">
             <h1 class="logo"><a href="../home/homepage.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></h1>
