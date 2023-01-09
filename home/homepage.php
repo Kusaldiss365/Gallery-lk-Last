@@ -110,7 +110,12 @@ if (isset($_POST['save'])) {
                                 <p class="content">
                                     <?php echo $row['ad_desc'];  ?>
                                 <div class="card-footer bg-transparent border-black">
-                                    <a href="../Favourites/fav.php" class="btn btn-warning w-15 p-1">Add to Favoriutes</a>
+                                    <!-- <a href="../Favourites/fav.php" class="btn btn-warning w-15 p-1">Add to Favoriutes</a> -->
+                                    <form action="../Favourites/FA.php" method="POST">
+                                        <input type="hidden" name="user_id" value="<?php echo ($_SESSION['user_id']);?>">
+                                        <input type="hidden" name="ad_id" value="<?php echo $row['ad_id'];  ?>">
+                                        <input type="submit" value="Add fav"></button>
+                                    </form>
                                     <a href="#" class="btn btn-primary w-20 p-1">Contact Seller</a>
                                 </div>
                                 </p>
