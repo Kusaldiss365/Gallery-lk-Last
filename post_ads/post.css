@@ -6,7 +6,10 @@ body {
 	line-height: 1.6;
 	margin: 0;
 	min-height: 100vh;
-
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
 }
 
 ul {
@@ -96,8 +99,6 @@ ul {
 
 }
 .profile{
-
-
 	display:flex ;
 	align-items: flex-start;
 	justify-content: flex-start;
@@ -123,12 +124,6 @@ p{
 }
 
 
-.body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-}
 .inner{
     display: flex;
 	align-items: center;
@@ -189,27 +184,3 @@ table tr th{
  .post .postbtn:hover{
 	background: rgb(0, 18, 175);
  }
-
- @media (min-width: 769px) {
-	.header,
-	.main-nav {
-		display: flex;
-	}
-	.header {
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
-		margin: 0 auto;
-		max-width: 2000px;
-	}
-
-
-}
-
-@media (min-width: 1025px) {
-	.header {
-		flex-direction: row;
-		justify-content: space-between;
-	}
-
-}

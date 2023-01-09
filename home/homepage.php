@@ -29,29 +29,31 @@ if (isset($_POST['save'])) {
 </head>
 
 <body>
-    <div class="nav-bar">
-        <div class="logo"><a href="../home/homepage.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search Here" class="search-box" name="search">
-            <button type="submit" class="search-btn">search</button>
-        </div>
-        <div class="buttons">
-            <button class="login"><a href="../Login/login.php">Login</a></button>
-            <button class="register"><a href="../signup/signup.php">Register</a></button>
-            <?php
-            if (isset($_SESSION['firstname'])) {
-                echo '<button class="useracc" style="color:blue; text-decoration:none;"><a href="../User/user.php">My Account</a></button>';
-            }
-
-            ?>
-            <button class="dropbtn"><img src="../Src/setting.png" width="25px"></button>
-            <div class="dropdown1">
-                <a href="#">ss</a>
-                <a href="#">1</a>
-                <a href="#">3</a>
-                <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
+        <div class="nav-bar">
+            <div class="logo"><a href="../home/homepage.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search Here" class="search-box">
+                <button type="submit" class="search-btn">search</button>
+            </div>
+            <div class="buttons">
+                <?php
+                if (isset($_SESSION['firstname'])) {
+                    echo '<button class="useracc" style="color:blue; text-decoration:none;"><a href="../User/user.php">My Account</a></button>';
+                }
+                else {
+                    echo '<button class="login"><a href = "../Login/login.php" >Login</a></button>';
+                    echo '<button class="register"><a href = "../signup/signup.php">Register</a></button>}';
+                }
+                   
+                ?>
+                <div class="dropdown">
+                    <button class="dropbtn"><img src="../Src/setting.png" width="25px"></button>
+                    <div class="dropdown1">
+                        <a href="../contact/index.html">Contact Us</a>
+                        <a href="#">Logout</a>
+                    </div>
+            </div>
+            </div>
             </div>
         </div>
     </div>

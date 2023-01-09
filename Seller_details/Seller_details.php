@@ -8,21 +8,32 @@
     <title>Document</title>
 </head>
 <body>
-<div class="nav-bar">
-            <div class="logo"><a href="../home/homepage.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></div>
-            <div class="search-bar">
-                <input type="text" placeholder="Search Here" class="search-box">
-                <button type="submit" class="search-btn">search</button>
-            </div>
-            <div class="buttons">
-                <button class="login"><a href = "../Login/login.php" >Login</a></button>
-                <button class="register"><a href = "../signup/signup.php">Register</a></button>
-            </div>
-            </div>
-
-            <div class="container">
-            <table>
-            <div class="description">
+<div class="outer">
+        <div class="header">
+            <h1 class="logo"><a href="../home/home.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></h1>
+            <ul class="main-nav">
+                <li><a href="../home/home.php">Home</a></li>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Customer Care</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn"><img src="../Src/setting.png" width="25px"></button>
+                        <div class="dropdown1">
+                            <a href="#">ss</a>
+                            <a href="#">1</a>
+                            <a href="#">3</a>
+                            <a href="#">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="profile">
+            <img class="pic" src="../Src/user2.png">
+            <p class="uname">Sandundiss</p>
+        </div>
                         <tr>    
                                 <th>Seller Name: </th>
                                 <td><input type="text" name="sellerName"></td>

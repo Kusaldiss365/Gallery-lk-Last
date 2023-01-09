@@ -20,10 +20,3 @@ user log out
 </html>
 
 
-<script>
-    function logout(){
-        if(confirm("Do you want to logout?")){
-            location.href = './userlogout.php';
-        }
-    }
-</script>

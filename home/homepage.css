@@ -101,8 +101,8 @@ body{
     width: 450px;
     height: 70px;
     display: flex;
+    justify-content: end;
     align-items: center;
-    justify-content: center;
 }
 
 .login{
@@ -143,6 +143,7 @@ body{
     font-weight: 700;
     text-transform: uppercase;
     background-color: orangered;
+    margin-right:5px;
 }
 .register:hover{
     border: 2px solid black;
@@ -165,7 +166,6 @@ body{
     display: flex;
     align-items: center;
     color: azure;
-
 }
 
 nav{
@@ -185,7 +185,7 @@ li a{
    text-decoration: none;
    padding: 20px;
    padding-left: 60px;
-   padding-right: 60px;
+   padding-right: 70px;
 }
 
 li a:hover{
@@ -201,8 +201,8 @@ li a:hover{
     background-color: transparent;
     margin: 10px;
     padding: 0px;
-    width: 50px;
-    margin-right: 50px;
+    width: 20px;
+    margin-left: 30px;
     border: none;
     cursor: pointer;
   }
@@ -217,15 +217,18 @@ li a:hover{
     position: absolute;
     background-color: rgb(68, 29, 29);
     font-size: 15px;
-    min-width: 120px;
+    min-width: 90px;
     box-shadow: 0px 8px 16px 0px rgba(218, 218, 218, 0.2);
     z-index: 1;
     border-radius: 5px;
+    justify-content: center;
+    align-items: center;
   }
   
   .dropdown1 a {
     color: rgb(110, 89, 89);
     padding: 0px;
+    align-items: center;
     text-decoration: none;
     display: block;
   }
@@ -254,14 +257,3 @@ li a:hover{
     color: rgb(255, 170, 170);
 }
 /*-----------------------navigation items ends-------------------*/
-
-/* .grid-container{
-    padding: 10px;
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
-.grid-item{
-    border: 2px solid red;
-    background-color: green;
-} */
