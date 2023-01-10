@@ -13,13 +13,17 @@
         <div class="header">
                 <h1 class="logo"><a href="../home/home.php"><img src="../Src/Logo.png" width="50px" height="50px" width="20px"></a></h1>
             <ul class="main-nav">
-                <li><a href="#">Home</a></li>
+                <li><a href="../home/homepage.php">Home</a></li>
                 <li><a href="#">My Account</a></li>
                 <li><a href="#">Customer Care</a></li>
                 <li><div class="dropdown">
                     <button class="dropbtn"><img src="../Src/setting.png" width="20px"></button>
                     <div class="dropdown1">
-                    <a href="../contact/index.html">Contact Us</a>
+                      <a href="../privacy/privacy.php">Polices</a>
+                      <a href="#">Account Details</a>
+                      <a href="../help/help.php">Help</a>
+                      <a href="#">Logout</a>
+                      
                     </div>
                   </div>
                 </li>
@@ -35,64 +39,32 @@
                 <div>
                     <div class="icon"><img src="../Src/Complaints.png" alt="" class="tip">check Complains</div>
                 </div>
-                <div class="form">
-                <form action="" method="get" class="search">
-                    <input type="text " placeholder="search username" name="search" size="50">
-                    <button type="submit" class="sbtn" value="Search">Search</button>
-                </form>
-                </div>
+                
                 <div class="table" id="tableid">
                     <table>
                         <tr> 
-                            <th colspan="3">Username</th>
-                            <th > Pending Complains</th>
+                            <th>Contact User</th>
+                            <th>Complains</th>
+                            
                         </tr>
                         <tr>
-                            <td >Kussaldiss</td>
+                            
                             <td >
                                 <div> 
-                                   <button type="submit"  class ="button button1">Contact User</button>
+                                   <button type="submit"  class ="button button1"><a class="link" href ="../contact_user/usercon.php">Contact User</a></button>
                                 </div>   
                             </td> 
                             <td >
                                 <div > 
-                                    <button type="submit" class ="button button2">Check Complains</button>
+                                    <button type="submit" class ="button button2" ><a class="link" href ="../checkcomplain_details/check.php">Check Complains</button>
                                 </div> 
 
                             </td>
-                            <td > 02</td>         
+                                
 
                         </tr>
-                        <tr>
-                            <td >Kaveesha</td>
-                            <td >
-                                <div> 
-                                   <button type="submit" class ="button button1">Contact User</button>
-                                </div>   
-                            </td> 
-                            <td >
-                                <div> 
-                                    <button type="submit" class ="button button3">Check Complains</button>
-                                </div> 
-
-                            </td>
-                            <td > 01</td>         
-
-                        </tr>
-                        <tr>
-                            <td >udeesha</td>
-                            <td >
-                                <div> 
-                                   <button type="submit" class ="button button1">Contact User</button>
-                                </div>   
-                            </td> 
-                            <td >
-                                <div> 
-                                    <button type="submit" class ="button button4">Check Complains</button>
-                                </div> 
-                            </td>
-                            <td > 00</td> 
-                        </tr>
+                        
+                        
                     </table>
                 </div>
             </div>
