@@ -21,18 +21,11 @@
                 <div class="dropdown">
                     <button class="dropbtn"><img src="../Src/setting.png" width="20px"></button>
                     <div class="dropdown1">
-                        <a href="#">Polices</a>
-                        <a href="#">Account Details</a>
-                        <a href="#">Help</a>
-                        <a href="#">Logout</a>
+                    <a href="../contact/index.html">Contact Us</a>
                     </div>
                 </div>
             </li>
         </ul>
-    </div>
-    <div class="profile">
-        <img class="pic" src="../Src/user1.png">
-        <p class="username">Admin</p>
     </div>
     <div class="content">
         <form action="comp_function.php" method="POST">

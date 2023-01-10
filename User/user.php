@@ -31,11 +31,12 @@
             </ul>
         </div> 
         <div class="profile">            
-           <? if (isset($_SESSION['firstname'])) {
-               echo  '<img class="pic" src="../Src/user2.png">';
-                echo "Logged in as";
-                echo $_SESSION['firstname'];}
-                ?>
+        <?php
+            if (isset($_SESSION['firstname'])) {
+            echo "Logged in as ";
+            echo $_SESSION['firstname'];
+            }
+            ?>
         </div>
             <div class="body">
                 <div class="inne">

@@ -37,12 +37,11 @@
             </ul>
         </div>
         <div class="profile">
-        <?php
-        if (isset($_SESSION['firstname'])) {
+        <? if (isset($_SESSION['firstname'])) {
             echo "Logged in as";
-             echo $_SESSION['firstname']; 
-                                    }
-                                    ?>
+            echo $_SESSION["firstname"];
+        }
+        ?>
         
         </div>
         <div class="body">

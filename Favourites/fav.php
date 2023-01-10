@@ -31,7 +31,12 @@
             </ul>
         </div> 
         <div class="profile">
-                Logged in as <?php echo $_SESSION['firstname']; ?>
+        <?php if (isset($_SESSION['firstname'])) {
+          echo  '<img class="pic" src="../Src/user2.png">';
+          echo "Logged in as";
+          echo $_SESSION['firstname'];
+        }
+        ?>
         </div>
             <div class="body">
                 <div class="inner">

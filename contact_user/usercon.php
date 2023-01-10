@@ -29,10 +29,7 @@
                                    aria-expanded="false">
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Policies</a></li>
-                                    <li><a class="dropdown-item" href="#">Accounts</a></li>
-                                    <li><a class="dropdown-item" href="#">Help</a></li>
-                                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                                <li><a href="../contact/index.html">Contact Us</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
