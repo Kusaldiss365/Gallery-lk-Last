@@ -6,7 +6,8 @@ body {
 	line-height: 1.6;
 	margin: 0;
 	min-height: 100vh;
-
+	background: rgb(2,0,36);
+	background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,130,255,1) 100%);
 }
 
 ul {
@@ -188,7 +189,7 @@ table tr th{
 	height: 300px;
 	margin: 50px 0px 35px 25px;
 	border-radius: 15px;
-	background-color: rgb(199, 109, 109);
+	background-color: rgb(235, 198, 198);
 	padding: 30px;
     border: #ffffff solid 1px;
 	position: absolute;

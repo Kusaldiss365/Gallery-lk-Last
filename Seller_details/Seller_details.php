@@ -30,12 +30,7 @@ include '../config.php';
                     <div class="dropdown">
                         <button class="dropbtn"><img src="../Src/setting.png" width="25px"></button>
                         <div class="dropdown1">
-                            <a href="#">ss</a>
-                            <a href="#">1</a>
-                            <a href="#">3</a>
-                            <a href="#">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
+                        <a href="../contact/index.html">Contact Us</a>
                         </div>
                     </div>
                 </li>
