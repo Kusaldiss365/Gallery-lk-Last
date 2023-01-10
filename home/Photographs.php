@@ -4,7 +4,7 @@ $searchErr = '';
 $employee_details = '';
 
     
-        $search = 'Photographs';
+        $search = 'Photograph';
         #$stmt = $con->prepare("SELECT * FROM ads WHERE (`category` = 'Photographs') ");
         $stmt = $con->prepare("SELECT * FROM ads WHERE (`category` LIKE '%" . $search . "%') ");
 
@@ -53,12 +53,7 @@ $employee_details = '';
             ?>
             <button class="dropbtn"><img src="../Src/setting.png" width="25px"></button>
             <div class="dropdown1">
-                <a href="#">ss</a>
-                <a href="#">1</a>
-                <a href="#">3</a>
-                <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
+            <a href="../contact/index.html">Contact Us</a>
             </div>
         </div>
     </div>
@@ -91,34 +86,28 @@ $employee_details = '';
 
     <div class="container">
     <aside style="width:50%;">
-        <div class="grid-container">
+        <div class="grid-container d-flex align-items-center justify-content-center flex-colu">
             <?php
             if (!$employee_details) {
             } else {
                 foreach ($employee_details as $key => $value) {
             ?>
-                    <div class="grid-item">
+                    <div class="grid-item" style="background-color:white; border-radius:10px; box-shadow:0 0 10px black;">
                         
-                            <div class="cards-img" style="width:250px;"><img src="<?php echo $value['img_dir']; ?>" width="100px" height="250px" class="card-img-top" alt="Product Image"></div>
-                            <div class="ad-area">
-                                <div class="ad-name"><?php echo $value['adName']; ?></div>
-                                <div class="ad-category"><?php echo $value['category']; ?></div>
-                            </div>
+                        <div class="cards-img" style="width:250px;"><img src="<?php echo $value['img_dir']; ?>" width="100px" height="250px" class="card-img-top" alt="Product Image"></div>
+                        <div class="ad-area">
+                            <div class="ad-category"><?php echo $value['category']; ?></div>
+                            <div class="ad-name"><?php echo $value['adName']; ?></div>
+                            <div class="ad-category">Rs.<?php echo $value['price']; ?></div>
                         </div>
                     </div>
+                </div>
             <?php
                 }
             }
             ?>
         </div>
     </aside>
-    </div>
-
-    <div class="bottom absolute-bottom">
-        |<a href="../about us/about.php">About us</a>|
-        <a href="../contact/index.html">Contact us </a>|
-        <a href="../privacy/privacy.php">Privacy & Policy</a>|
-        <a href="../help/help.php">Help</a>|
     </div>
     </div>
 </body>

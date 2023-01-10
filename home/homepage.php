@@ -100,7 +100,9 @@ if (isset($_POST['save'])) {
                                 <p class="content">
                                     <?php echo 'ID: ';
                                     echo $row['ad_id'];
-                                    $_SESSION['tempid'] = $row['ad_id'];
+                                    echo "<br>";
+                                    echo 'Price: ';
+                                    echo $row['price'];
                                     echo "<br>";
                                     echo $row['ad_desc'];  ?>
                                 <div class="card-footer bg-transparent border-black">

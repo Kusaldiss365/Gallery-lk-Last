@@ -24,14 +24,14 @@ if (isset($_POST['save'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="homepage.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="../home/homepage.css">
     <title>Home</title>
 </head>
 
 <body>
-        <div class="nav-bar">
-            <div class="logo"><a href="../home/homepage.php"><img src="../Src/Logo.png" width="60px" height="60px"></a></div>
-            <form class="form-horizontal" action="../home/homepage_copy.php" method="post">
+    <div class="nav-bar">
+        <div class="logo"><a href="../home/homepage.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></div>
+        <form class="form-horizontal" action="../home/homepage_copy.php" method="post">
             <div class="row search-bar">
                 <div class="form-group">
                     <input type="text" class="search-box" name="search" placeholder="search here">
@@ -39,25 +39,24 @@ if (isset($_POST['save'])) {
                 </div>
             </div>
         </form>
-            <div class="buttons">
-                <?php
-                if (isset($_SESSION['firstname'])) {
-                    echo '<button class="useracc" style="color:blue; text-decoration:none;"><a href="../Admin/admin.php">My Account</a></button>';
-                }
-                else {
-                    echo '<button class="login"><a href = "../Login/login.php" >Login</a></button>';
-                    echo '<button class="register"><a href = "../signup/signup.php">Register</a></button>}';
-                }
-                   
-                ?>
-                <div class="dropdown">
-                    <button class="dropbtn"><img src="../Src/setting.png" width="25px"></button>
-                    <div class="dropdown1">
-                        <a href="../contact/index.html">Contact Us</a>
-                        <button class="logoutbtn"onclick="logout()"><a href="#">Logout</a></button>
-                    </div>
-            </div>
-            </div>
+
+        <div class="buttons">
+            <button class="login"><a href="../Login/login.php">Login</a></button>
+            <button class="register"><a href="../signup/signup.php">Register</a></button>
+            <?php
+            if (isset($_SESSION['firstname'])) {
+                echo '<button class="useracc" style="color:blue; text-decoration:none;"><a href="../User/user.php">My Account</a></button>';
+            }
+
+            ?>
+            <button class="dropbtn"><img src="../Src/setting.png" width="25px"></button>
+            <div class="dropdown1">
+                <a href="#">ss</a>
+                <a href="#">1</a>
+                <a href="#">3</a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
             </div>
         </div>
     </div>
@@ -78,83 +77,49 @@ if (isset($_POST['save'])) {
         </div>
     </nav>
 
-    <div class="container fluid" id="cardcontainer">
-        <div class="row">
+    <div class="test">
+        <?php
+        if (isset($_SESSION['firstname'])) {
+            echo "Logged in as ";
+            echo $_SESSION['firstname'];
+        }
+
+        ?>
+    </div>
+
+    <div class="container" style="height:100vh">
+    <aside style="width:50%;">
+        <div class="grid-container d-flex align-items-center justify-content-center flex-column">
             <?php
-            require "../post_ads/db.php";
-
-            $query = "SELECT * FROM ads";
-            $query_run = mysqli_query($conn, $query);
-            $check_ad = mysqli_num_rows($query_run) > 0;
-
-            if ($check_ad) {
-                while ($row = mysqli_fetch_assoc($query_run)) {
+            if (!$employee_details) {
+            } else {
+                foreach ($employee_details as $key => $value) {
             ?>
-
-                    <div class="col-md-4 py-5">
-                        <div class="card" style="width:350px">
-                            <img src="<?php echo $row['img_dir']; ?>" width="300px" height="200px" class="card-img-top" alt="Product Image">
-                            <div class="card-body py-4">
-                                <h2 class="ad_title"><?php echo $row['adName'];  ?></h2>
-                                <h5 class="ad_title"><?php echo $row['category'];  ?></h5>
-                                <p class="content">
-                                    <?php echo 'ID: ';
-                                    echo $row['ad_id'];
-                                    $_SESSION['tempid'] = $row['ad_id'];
-                                    echo "<br>";
-                                    echo $row['ad_desc'];  ?>
-                                <div class="card-footer bg-transparent border-black">
-                                <?php
-                                    if (isset($_SESSION['firstname'])) {
-                                        echo '<form action="../Favourites/FA.php" method="POST">';
-                                        echo '<input type="hidden" name="user_id" value="';
-                                        echo ($_SESSION['user_id']);
-                                        echo '">';
-                                        echo '<input type="hidden" name="ad_id" value="';
-                                        echo $row['ad_id'];
-                                        echo '">';
-                                        echo '<input type="submit" class="btn btn-warning w-15 p-1 b-2" value="Add to favorites">';
-                                        echo '</form>';
-                                    }
-                                    ?>
-                                    <!-- <form action="../Favourites/FA.php" method="POST">
-                                        <input type="hidden" name="user_id" value="<?php echo ($_SESSION['user_id']);?>">
-                                        <input type="hidden" name="ad_id" value="<?php echo $row['ad_id'];  ?>">
-                                        <input type="submit" class="btn btn-warning w-15 mb-1" value="Add to favorites">
-                                    </form> -->
-                                    <a href="../Seller_details/Seller_details.php" class="btn btn-primary w-24 p-1 b-2">Contact Seller</a>
-                                </div>
-                                </p>
+                    <div class="grid-item" style="background-color:white; border-radius:10px; box-shadow:0 0 10px black;">
+                        
+                            <div class="cards-img" style="width:250px;"><img src="<?php echo $value['img_dir']; ?>" width="100px" height="250px" class="card-img-top" alt="Product Image"></div>
+                            <div class="ad-area">
+                                <div class="ad-category"><?php echo $value['category']; ?></div>
+                                <div class="ad-name"><?php echo $value['adName']; ?></div>
+                                <div class="ad-category">Rs.<?php echo $value['price']; ?></div>
                             </div>
                         </div>
                     </div>
             <?php
-
                 }
-            } else {
-                echo "No Ads Found";
             }
             ?>
         </div>
+    </aside>
     </div>
-    </div>
-    
-    
-    </div>
-    <div class="bottom absolute-bottom" >
+
+    <div class="bottom absolute-bottom">
         |<a href="../about us/about.php">About us</a>|
         <a href="../contact/index.html">Contact us </a>|
         <a href="../privacy/privacy.php">Privacy & Policy</a>|
         <a href="../help/help.php">Help</a>|
     </div>
-<script>
-    function logout(){
-        if(confirm("Do you want to logout?")){
-            location.href = '../User/userlogout.php';
-        }
-    }
-</script>
-
+    </div>
 </body>
 
 </html>
