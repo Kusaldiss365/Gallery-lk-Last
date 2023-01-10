@@ -8,5 +8,6 @@ $conn = mysqli_connect('localhost','root','','gallerylk');
 
     $insert = "INSERT INTO fav(user_id,ad_id) VALUES('$user_id','$ad_id')";
     mysqli_query($conn, $insert);
+    header('Location:../Favourites/fav.php');
 
 ?>

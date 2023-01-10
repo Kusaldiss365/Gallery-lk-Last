@@ -75,13 +75,7 @@ $employee_details = '';
     </nav>
 
     <div class="test">
-        <?php
-        if (isset($_SESSION['firstname'])) {
-            echo "Logged in as ";
-            echo $_SESSION['firstname'];
-        }
-
-        ?>
+    
     </div>
 
     <div class="container">

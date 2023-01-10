@@ -36,61 +36,65 @@
           echo $_SESSION['firstname'];
         }
         ?>
-        </div>
+
+</div>
             <div class="body">
                 <div class="inner">
                         <div>
                             <div class="icon"><img src="../Src/star.png" alt="" class="tip">Favourites</div>
                         </div>
-                        <div class="box1">
-                            <div class="image"><img src="../Src/1.jpg" alt=""  class="itms1" width="400px"></div>
-                            <div class="text">
-                                <table>
-                                    <tr>
-                                        <th>Name </th>
-                                        <td>: ABC</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Catagory </th>
-                                        <td>: Oil Paint</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Price </th>
-                                        <td>: $2000.00</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="btn">
-                                <button  type="button" class="favbutton"> <a href="" ><img src="../Src/star.png" class="star"></a></button>
-                                <button type="button"  class="btn2"> <a href="" class="btnstyle"> Contact Seller</a></button>
-                            </div>
-                        </div>
-                        <div class="box1">
-                        <div class="image"><img src="../Src/2.jpg" alt="" class="itms1" width="400px" ></div>
-                            <div class="text">
-                                <table>
-                                    <tr>
-                                        
-                                        <th>Name</th>
-                                        <td>: ABC</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Catagory :</th>
-                                        <td>: Oil Paint</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Price :</th>
-                                        <td>: $2000.00</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="btn">
-                                <button  type="button" class="favbutton"> <a href="" ><img src="../Src/star.png" class="star"></a></button>
-                                <button type="button" class="btn2"> <a href="" class="btnstyle"> Contact Seller</a></button>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-         </div>
-</body>
-</html>
+
+        <?php 
+            require "../post_ads/db.php";
+            $user=$_SESSION['user_id'];
+            $query = "SELECT *FROM fav WHERE user_id=$user";
+            $query_run = mysqli_query($conn, $query);
+            $check_ad = mysqli_num_rows($query_run) > 0;
+
+            if ($check_ad) {
+                while ($row = mysqli_fetch_assoc($query_run)) {
+        ?>
+      
+                              <div class="box1">
+                                  <div class="image"><img src="../Src/1.jpg" alt=""  class="itms1" width="400px"></div>
+                                  <div class="text">
+                                      <table>
+                                          <tr>
+                                              <th>Name </th>
+                                              <td>: ABC</td>
+                                          </tr>
+                                          <tr>
+                                              <th>Catagory </th>
+                                              <td>: Oil Paint</td>
+                                          </tr>
+                                          <tr>
+                                              <th>Price </th>
+                                              <td>: $2000.00</td>
+                                          </tr>
+                                      </table>
+                                  </div>
+                                  <div class="btn">
+                                      <button  type="button" class="favbutton"> <a href="" ><img src="../Src/star.png" class="star"></a></button>
+                                      <button type="button"  class="btn2"> <a href="" class="btnstyle"> Contact Seller</a></button>
+                                  </div>
+                              </div>
+                              
+    <?php
+
+}
+} else {
+    echo "No Ads Found";
+}
+?>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+        </body>
+        </html>
+        
+        
+
+

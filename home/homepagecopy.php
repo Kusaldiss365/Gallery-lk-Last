@@ -67,7 +67,7 @@ if (isset($_POST['save'])) {
             </button>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                <li><a class="nav-item" href="../home/homepage_copy.php">All</a></li><label for="">|</label>
+                <li><a class="nav-item" href="../home/homepagecopy.php">All</a></li><label for="">|</label>
                 <li><a class="nav-item" href="../home/Paintings.php">Paintings</a></li><label for="">|</label>
                 <li><a class="nav-item" href="../home/Drawings.php">Drawings</a></li><label for="">|</label>
                 <li><a class="nav-item" href="../home/Handcrafts.php">Handcrafts</a></li><label for="">|</label>

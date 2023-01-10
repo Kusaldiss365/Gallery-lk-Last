@@ -11,7 +11,7 @@
 
 <body style="  background-image: linear-gradient(180deg, red, yellow); background-repeat:no-repeat; height:95vh;">
     <div class="header">
-        <h1 class="logo"><a href="../home/home.php"><img src="../Src/Logo.png" width="50px" height="50px"
+        <h1 class="logo"><a href="../home/homepage.php"><img src="../Src/Logo.png" width="50px" height="50px"
                     width="20px"></a></h1>
         <ul class="main-nav">
             <li><a href="../home/homepage.php">Home</a></li>

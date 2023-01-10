@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost','root','','register');
+$conn = mysqli_connect('localhost','root','','gallerylk');
 
 $id = $_POST['id'];
 $text = $_POST['message'];

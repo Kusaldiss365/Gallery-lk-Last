@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost','root','','register');
+$conn = mysqli_connect('localhost','root','','gallerylk');
 
 $id = $_GET['id'];
 $action = $_GET['action'];
