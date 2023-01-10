@@ -42,7 +42,7 @@ if (isset($_POST['save'])) {
             <div class="buttons">
                 <?php
                 if (isset($_SESSION['firstname'])) {
-                    echo '<button class="useracc" style="color:blue; text-decoration:none;"><a href="../User/user.php">My Account</a></button>';
+                    echo '<button class="useracc" style="color:blue; text-decoration:none;"><a href="../Admin/admin.php">My Account</a></button>';
                 }
                 else {
                     echo '<button class="login"><a href = "../Login/login.php" >Login</a></button>';

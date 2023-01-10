@@ -19,7 +19,7 @@
                 <li><div class="dropdown">
                     <button class="dropbtn"><img src="../Src/setting.png" width="20px"></button>
                     <div class="dropdown1">
-					<li><a href="../contact/index.html">Contact Us</a></li>
+					<a href="../contact/index.html">Contact Us</a>
                     </div>
                   </div>
                 </li>
