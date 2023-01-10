@@ -43,26 +43,27 @@ $employee_details = '';
         </form>
 
         <div class="buttons">
-            <button class="login"><a href="../Login/login.php">Login</a></button>
-            <button class="register"><a href="../signup/signup.php">Register</a></button>
-            <?php
-            if (isset($_SESSION['firstname'])) {
-                echo '<button class="useracc" style="color:blue; text-decoration:none;"><a href="../User/user.php">My Account</a></button>';
-            }
-
-            ?>
-            <button class="dropbtn"><img src="../Src/setting.png" width="25px"></button>
-            <div class="dropdown1">
-                <a href="#">ss</a>
-                <a href="#">1</a>
-                <a href="#">3</a>
-                <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
+                <?php
+                if (isset($_SESSION['firstname'])) {
+                    echo '<button class="useracc" style="color:blue; text-decoration:none;"><a href="../User/user.php">My Account</a></button>';
+                }
+                else {
+                    echo '<button class="login"><a href = "../Login/login.php" >Login</a></button>';
+                    echo '<button class="register"><a href = "../signup/signup.php">Register</a></button>}';
+                }
+                   
+                ?>
+                <div class="dropdown">
+                    <button class="dropbtn"><img src="../Src/setting.png" width="25px"></button>
+                    <div class="dropdown1">
+                        <a href="../contact/index.html">Contact Us</a>
+                        <button class="logoutbtn"onclick="logout()"><a href="#">Logout</a></button>
+                    </div>
+            </div>
+            </div>
             </div>
         </div>
     </div>
-
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             </button>

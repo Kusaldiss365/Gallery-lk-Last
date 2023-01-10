@@ -54,7 +54,7 @@ if (isset($_POST['save'])) {
                     <button class="dropbtn"><img src="../Src/setting.png" width="25px"></button>
                     <div class="dropdown1">
                         <a href="../contact/index.html">Contact Us</a>
-                        <button class="logoutbtn"onclick="logout()"><a href="#">Logout</a></button>
+                        <button class="logoutbtn"onclick="logout()"><a href="../home/homepage.php">Logout</a></button>
                     </div>
             </div>
             </div>
@@ -62,6 +62,7 @@ if (isset($_POST['save'])) {
         </div>
     </div>
 
+    
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             </button>
@@ -116,7 +117,7 @@ if (isset($_POST['save'])) {
                                         <input type="hidden" name="ad_id" value="<?php echo $row['ad_id'];  ?>">
                                         <input type="submit" value="Add fav"></button>
                                     </form>
-                                    <a href="#" class="btn btn-primary w-20 p-1">Contact Seller</a>
+                                    <a href="" class="btn btn-primary w-20 p-1">Contact Seller</a>
                                 </div>
                                 </p>
                             </div>

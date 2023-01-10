@@ -18,20 +18,20 @@ session_start();
 
    }else{
       
-      if (mysqli_num_rows($type)>0) {
+      if (mysqli_num_rows($type)==1) {
          if($result){
             if(mysqli_num_rows($result) == 1){
             $user = mysqli_fetch_assoc($result);
             $_SESSION['userid'] = $user['user_id'];
             $_SESSION['firstname'] = $user['firstname'];
             $_SESSION['user_id'] = $user['user_id'];
-
-            header('Location:../home/homepage.php');
+           header('Location:../Admin/admin.php');
+           // header('Location:../home/homepage.php');
             }
          }
          
 
-      }else if (mysqli_num_rows($type)==1) {
+      }else if (mysqli_num_rows($type)==0) {
          
          if($result){
             if(mysqli_num_rows($result) == 1){
@@ -39,8 +39,8 @@ session_start();
             $_SESSION['userid'] = $user['user_id'];
             $_SESSION['firstname'] = $user['firstname'];
             $_SESSION['user_id'] = $user['user_id'];
-      
             header('Location:../home/homepage.php');
+            // header('Location:../Admin/admin.php');
             }
          }
       }
