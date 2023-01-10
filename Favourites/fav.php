@@ -13,7 +13,7 @@
 <body >
     <div class="outer">
         <div class="header">
-                <h1 class="logo"><a href="../home/home.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></h1>
+        <div class="logo"><a href="../home/homepage.php"><img src="../Src/Logo.png" width="60px" height="60px"></a></div>
             <ul class="main-nav">
                 <li><a href="../home/homepage.php">Home</a></li>
                 <li><a href="#">My Account</a></li>
@@ -45,48 +45,48 @@
                         <div class="box1">
                             <div class="image"><img src="../Src/1.jpg" alt=""  class="itms1" width="400px"></div>
                             <div class="text">
-                                <table>
+                                <table class="table1">
                                     <tr>
                                         <th>Name </th>
-                                        <td>: ABC</td>
+                                        <td>: Dawn of Night</td>
                                     </tr>
                                     <tr>
-                                        <th>Catagory </th>
-                                        <td>: Oil Paint</td>
+                                        <th>Category </th>
+                                        <td>: Painting</td>
                                     </tr>
                                     <tr>
                                         <th>Price </th>
-                                        <td>: $2000.00</td>
+                                        <td>: Rs. 3000</td>
                                     </tr>
                                 </table>
                             </div>
                             <div class="btn">
-                                <button  type="button" class="favbutton"> <a href="" ><img src="../Src/star.png" class="star"></a></button>
-                                <button type="button"  class="btn2"> <a href="" class="btnstyle"> Contact Seller</a></button>
+                                <!-- <button  type="button" class="favbutton"> <a href="" ><img src="../Src/star.png" class="star"></a></button> -->
+                                <button type="button"  class="btn2"> <a href="../Seller_details/Seller_details.php" class="btnstyle"> Contact Seller</a></button>
                             </div>
                         </div>
                         <div class="box1">
                         <div class="image"><img src="../Src/2.jpg" alt="" class="itms1" width="400px" ></div>
                             <div class="text">
-                                <table>
+                                <table  class="table1">
                                     <tr>
                                         
                                         <th>Name</th>
-                                        <td>: ABC</td>
+                                        <td>: Iris</td>
                                     </tr>
                                     <tr>
-                                        <th>Catagory :</th>
-                                        <td>: Oil Paint</td>
+                                        <th>Category :</th>
+                                        <td>: Drawing</td>
                                     </tr>
                                     <tr>
                                         <th>Price :</th>
-                                        <td>: $2000.00</td>
+                                        <td>: Rs. 2000</td>
                                     </tr>
                                 </table>
                             </div>
                             <div class="btn">
-                                <button  type="button" class="favbutton"> <a href="" ><img src="../Src/star.png" class="star"></a></button>
-                                <button type="button" class="btn2"> <a href="" class="btnstyle"> Contact Seller</a></button>
+                                <!-- <button  type="button" class="favbutton"> <a href="" ><img src="../Src/star.png" class="star"></a></button> -->
+                                <button type="button" class="btn2"> <a href="../Seller_details/Seller_details.php" class="btnstyle"> Contact Seller</a></button>
                             </div>
                         </div>
                     </div>
