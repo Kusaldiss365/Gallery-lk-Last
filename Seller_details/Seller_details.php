@@ -12,13 +12,13 @@
 <?php
 include '../config.php';
 
-$select1 = " SELECT * FROM ads WHERE user_id = '{$userId}'";
-$result = mysqli_query($conn, $select);
+// $select1 = " SELECT * FROM ads WHERE user_id = '{$userId}'";
+// $result = mysqli_query($conn, $select);
 
-if(mysqli_num_rows($result) == 1){
-    $user = mysqli_fetch_assoc($result);
-    $_SESSION['userid'] = $user['user_id'];}
-?>
+// if(mysqli_num_rows($result) == 1){
+//     $user = mysqli_fetch_assoc($result);
+//     $_SESSION['userid'] = $user['user_id'];}
+// ?>
 <div class="outer">
         <div class="header">
             <h1 class="logo"><a href="../home/home.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></h1>
@@ -42,8 +42,7 @@ if(mysqli_num_rows($result) == 1){
             </ul>
         </div>
         <div class="profile">
-            
-            <?php
+           <?php
             if (isset($_SESSION['firstname'])) {
                echo  '<img class="pic" src="../Src/user2.png">';
                 echo "Logged in as";
@@ -54,28 +53,28 @@ if(mysqli_num_rows($result) == 1){
                 <form action="">
                 <table>
                         <tr>    
-                                <th>Ad Name  </th>
+                                <!-- <th>Ad Name  </th>
                                 <td></td>
-                                <td><input type="text" class="inputs" name="sellerName"></td>
+                                <td><input type="text" class="inputs" name="sellerName"></td> -->
                        </tr>
                         <tr>    
                                 <th>Seller Name </th>
                                 <td></td>
-                                <td><input type="text" class="inputs" name="sellerName"></td>
+                                <td><input type="text" class="inputs" value="Kusal" name="sellerName"></td>
                        </tr>
                        <tr></tr>
                        <tr></tr>
                         <tr>
                                 <th>Phone Number  </th>
                                 <td></td>
-                                <td><input type="text" class="inputs" name="phone"></td>
+                                <td><input type="text" class="inputs" value="0768871660" name="phone"></td>
                         </tr>
                         <tr></tr>
                         <tr></tr>   
                         <tr>
                                 <th>Email   </th>
                                 <td></td>
-                                <td><input type="text" class="inputs" name="email"></td>
+                                <td><input type="text" class="inputs" value="kusaldissanayake2@gmail.com" name="email"></td>
                         </tr>
                         <tr></tr>
                         <tr></tr>

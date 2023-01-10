@@ -217,7 +217,9 @@ table tr th{
 
 .inputs{
 	border-radius: 7px;
-	background-color:#dad9d9
+	background-color:#dad9d9;
+	width: 250px;
+
 }
 
  @media (min-width: 769px) {
