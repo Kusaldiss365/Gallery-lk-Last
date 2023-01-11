@@ -1,7 +1,7 @@
 body{
     /* background-size: cover;
     background-position: center; */
-    /* background-repeat: no-repeat; */
+    background-repeat: no-repeat; 
     /* background-image: url("../Src/adminback.jpg"); */
     background: rgb(2,0,36);
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
@@ -14,6 +14,7 @@ body{
     justify-content: center;
     flex-direction: column;
     border-bottom: 3px solid rgb(0, 0, 0);
+    background-repeat: no-repeat; 
 }
 
 /*-----------------------navigation bar starts-------------*/
@@ -31,10 +32,11 @@ body{
 .logo{
     width: 100px;
     height: 100px;
-    margin-left: 5px;
+    margin-left: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right:40px;
 }
 
 .search-bar{
@@ -48,7 +50,7 @@ body{
 
 .search-box{
     width: 400px;
-    height: 40px;
+    height: 45px;
     background-image: linear-gradient(to right,rosybrown, rgb(255, 255, 255));
     border: 2px solid black;
     border-bottom-left-radius: 25px;
@@ -266,5 +268,22 @@ li a:hover{
 
 .bottom a:hover{
     color: rgb(82, 31, 31);
+
 }
+
+.card:hover{  
+box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
+transform: translate3d(0px, -1px, 0px);}
 /*-----------------------navigation items ends-------------------*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+  }
+  .grid-item {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }

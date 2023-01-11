@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="post.css">
 
 
-    <title>post an Ad</title>
+    <title>Post an Ad</title>
 </head>
 
 <body>
@@ -37,7 +37,13 @@
         </div>
         <div class="profile">
             <img class="pic" src="../Src/user2.png">
-            <p class="uname">Logged in as <?php echo $_SESSION['firstname']; ?></p>
+            <p class="uname">
+            <?php
+            if (isset($_SESSION['firstname'])) {
+            echo "Logged in as ";
+            echo $_SESSION['firstname'];
+            }
+            ?>
         </div>
         <div class="body">
             <div class="inner">
@@ -49,7 +55,7 @@
                 <div class="box1">
 
                     <form action="postad.php" method="post" class="form" enctype="multipart/form-data"
-                        target="./success.html">
+                        target="../User/user.php">
                         <table>
                             <tr>
                                 <th>

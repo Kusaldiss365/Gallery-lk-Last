@@ -9,9 +9,9 @@
     <title>complain</title>
 </head>
 
-<body>
+<body style="  background-image: linear-gradient(180deg, red, yellow); background-repeat:no-repeat; height:95vh;">
     <div class="header">
-        <h1 class="logo"><a href="../home/home.php"><img src="../Src/Logo.png" width="50px" height="50px"
+        <h1 class="logo"><a href="../home/homepage.php"><img src="../Src/Logo.png" width="50px" height="50px"
                     width="20px"></a></h1>
         <ul class="main-nav">
             <li><a href="../home/homepage.php">Home</a></li>
@@ -21,21 +21,14 @@
                 <div class="dropdown">
                     <button class="dropbtn"><img src="../Src/setting.png" width="20px"></button>
                     <div class="dropdown1">
-                        <a href="#">Polices</a>
-                        <a href="#">Account Details</a>
-                        <a href="#">Help</a>
-                        <a href="#">Logout</a>
+                    <a href="../contact/index.html">Contact Us</a>
                     </div>
                 </div>
             </li>
         </ul>
     </div>
-    <div class="profile">
-        <img class="pic" src="../Src/user1.png">
-        <p class="username">Admin</p>
-    </div>
-    <div class="content">
-        <form action="comp_function.php" method="POST">
+    <div class="content" >
+        <form action="comp_function.php" method="POST" style="background-color: white; display:flex; align-items:center;justify-content:center; flex-direction:column;">
             Ad id :
             <input type="text" name="id" class="id"><br><br>
             Describe your issue :

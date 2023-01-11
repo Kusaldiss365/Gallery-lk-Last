@@ -43,57 +43,24 @@
                 <div class="table" id="tableid">
                     <table>
                         <tr> 
-                            <th colspan="3">Username</th>
-                            <th > Status</th>
+                            <th >Contact User</th>
+                            
+                            
                         </tr>
-                        <tr>
-                            <td >Kusaldiss</td>
+                        <tr  style="height:150px">
+                            
                             <td >
                                 <div> 
                                    <button type="submit"  class ="button button1"><a class="link" href ="../contact_user/usercon.php">Contact User</a></button>
                                 </div>   
                             </td> 
-                            <td >
-                                <div > 
-                                    <button type="submit" class ="button button2"><a class="link" href ="../remove_user/rem.php">Remove User</a></button>
-                                </div> 
-
-                            </td>
-                            <td > Active</td>         
+                            
+                                     
 
                         </tr>
-                        <tr>
-                            <td >Kaveesha</td>
-                            <td >
-                                <div> 
-                                   <button type="submit" class ="button button1"><a class="link" href ="../contact_user/usercon.php">Contact User</a></button>
-                                </div>   
-                            </td> 
-                            <td >
-                                <div> 
-                                    <button type="submit" class ="button button2"><a class="link" href ="../remove_user/rem.php">Remove User</a></button>
-                                </div> 
+                        
 
-                            </td>
-                            <td > Active</td>         
-
-                        </tr>
-                        <tr>
-                            <td >udeesha</td>
-                            <td >
-                                <div> 
-                                   <button type="submit" class ="button button1"><a class="link" href ="../contact_user/usercon.php">Contact User</a></button>
-                                </div>   
-                            </td> 
-                            <td >
-                                <div> 
-                                    <button type="submit" class ="button button2"><a class="link" href ="../remove_user/rem.php">Remove User</a></button>
-                                </div> 
-
-                            </td>
-                            <td > Active</td>         
-
-                        </tr>
+                        
                         
                     </table>
                 </div>

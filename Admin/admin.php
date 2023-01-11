@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,24 +14,24 @@
         <div class="header">
                 <h1 class="logo"><a href="../home/home.php"><img src="../Src/Logo.png" width="50px" height="50px" width="20px"></a></h1>
             <ul class="main-nav">
-                <li><a href="#">Home</a></li>
+                <li><a href="../home/homecopy.php">Home</a></li>
                 <li><a href="#">My Account</a></li>
                 <li><a href="#">Customer Care</a></li>
                 <li><div class="dropdown">
                     <button class="dropbtn"><img src="../Src/setting.png" width="20px"></button>
                     <div class="dropdown1">
-                      <a href="#">Polices</a>
-                      <a href="#">Account Details</a>
-                      <a href="#">Help</a>
-                      <a href="#">Logout</a>
+                    <a href="../contact/index.html">Contact Us</a>
                     </div>
                   </div>
                 </li>
             </ul>
         </div> 
         <div class="profile">
-            <img class="pic" src="../Src/user1.png">
-            <p class="username">Admin</p>
+        <?php if (isset($_SESSION['firstname'])) {
+          echo "Logged in as ";
+          echo $_SESSION['firstname'];
+        }
+        ?>
         </div>
         <form action="adminback.php" method="post">
          <div class="body">
