@@ -24,7 +24,7 @@ if (isset($_POST['save'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="homepage.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../home/homepage.css">
+    <link rel="stylesheet" href="homepage.css">
     <title>Home</title>
 </head>
 
@@ -41,32 +41,33 @@ if (isset($_POST['save'])) {
         </form>
 
         <div class="buttons">
-            <button class="login"><a href="../Login/login.php">Login</a></button>
-            <button class="register"><a href="../signup/signup.php">Register</a></button>
-            <?php
-            if (isset($_SESSION['firstname'])) {
-                echo '<button class="useracc" style="color:blue; text-decoration:none;"><a href="../User/user.php">My Account</a></button>';
-            }
-
-            ?>
-            <button class="dropbtn"><img src="../Src/setting.png" width="25px"></button>
-            <div class="dropdown1">
-                <a href="#">ss</a>
-                <a href="#">1</a>
-                <a href="#">3</a>
-                <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
+                <?php
+                if (isset($_SESSION['firstname'])) {
+                    echo '<button class="useracc" style="color:blue; text-decoration:none;"><a href="../User/user.php">My Account</a></button>';
+                }
+                else {
+                    echo '<button class="login"><a href = "../Login/login.php" >Login</a></button>';
+                    echo '<button class="register"><a href = "../signup/signup.php">Register</a></button>}';
+                }
+                   
+                ?>
+                <div class="dropdown">
+                    <button class="dropbtn"><img src="../Src/setting.png" width="25px"></button>
+                    <div class="dropdown1">
+                        <a href="../contact/index.html">Contact Us</a>
+                        <button class="logoutbtn"onclick="logout()"><a href="#">Logout</a></button>
+                    </div>
+            </div>
+            </div>
             </div>
         </div>
     </div>
-
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             </button>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                <li><a class="nav-item" href="../home/homepagecopy.php">All</a></li><label for="">|</label>
+                <li><a class="nav-item" href="../home/homepage.php">All</a></li><label for="">|</label>
                 <li><a class="nav-item" href="../home/Paintings.php">Paintings</a></li><label for="">|</label>
                 <li><a class="nav-item" href="../home/Drawings.php">Drawings</a></li><label for="">|</label>
                 <li><a class="nav-item" href="../home/Handcrafts.php">Handcrafts</a></li><label for="">|</label>
@@ -78,24 +79,29 @@ if (isset($_POST['save'])) {
     </nav>
 
     <div class="test">
+        <?php
+        if (isset($_SESSION['firstname'])) {
+            echo "Logged in as ";
+            echo $_SESSION['firstname'];
+        }
 
+        ?>
     </div>
 
-    <div class="container" style="height:100vh">
+    <div class="container ">
     <aside style="width:50%;">
-        <div class="grid-container d-flex align-items-center justify-content-center flex-column">
+        <div class="grid-container">
             <?php
             if (!$employee_details) {
             } else {
                 foreach ($employee_details as $key => $value) {
             ?>
-                    <div class="grid-item" style="background-color:white; border-radius:10px; box-shadow:0 0 10px black;">
+                    <div class="grid-item">
                         
                             <div class="cards-img" style="width:250px;"><img src="<?php echo $value['img_dir']; ?>" width="100px" height="250px" class="card-img-top" alt="Product Image"></div>
                             <div class="ad-area">
-                                <div class="ad-category"><?php echo $value['category']; ?></div>
                                 <div class="ad-name"><?php echo $value['adName']; ?></div>
-                                <div class="ad-category">Rs.<?php echo $value['price']; ?></div>
+                                <div class="ad-category"><?php echo $value['category']; ?></div>
                             </div>
                         </div>
                     </div>
