@@ -112,6 +112,9 @@ if (isset($_POST['save'])) {
                                     <?php echo "ID: "?>
                                     <?php echo $row['ad_id'];  ?>
                                     <?php echo "<br>"?>
+                                    <?php echo "Price (LKR): "?>
+                                    <?php echo $row['price'];  ?>
+                                    <?php echo "<br>"?>
                                     <?php echo $row['ad_desc'];  ?>
                                 <div class="card-footer bg-transparent border-black">
                                     <!-- <a href="../Favourites/fav.php" class="btn btn-warning w-15 p-1">Add to Favoriutes</a> -->
