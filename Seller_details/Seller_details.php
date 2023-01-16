@@ -48,13 +48,10 @@ include '../config.php';
     require "../post_ads/db.php";
 
     $ad_id = $_POST['ad_id'];
-
-    $find = "SELECT user_id From ads WHERE ad_id=$ad_id";
-    $query_run1 = mysqli_query($conn, $find);
-    $userid = mysqli_fetch_assoc($query_run1);
-    // $select1 = mysqli_fetch_assoc($query_run1)
-    // $insert = "INSERT INTO fav(user_id,ad_id) VALUES('$user_id','$ad_id')";
-
+    
+    $join = "SELECT adName,firstname,phonenumber,email FROM userdetails INNER JOIN ads ON userdetails.user_id = ads.user_id WHERE ad_id=$ad_id";
+    $query_run = mysqli_query($conn, $join);
+    $sellerInfo = mysqli_fetch_assoc($query_run);
 ?>
 
 
@@ -64,28 +61,28 @@ include '../config.php';
                 <form action="">
                 <table>
                         <tr>    
-                                <th>Ad Name  </th>
+                                <th>Ad Name </th>
                                 <td></td>
-                                <td><?php echo $ad_id?></td>
+                                <td><?php echo $sellerInfo['adName']?></td>
                        </tr>
                         <tr>    
                                 <th>Seller Name </th>
                                 <td></td>
-                                <td><?php echo $userid['user_id'] ?></td>
+                                <td><?php echo $sellerInfo['firstname'] ?></td>
                        </tr>
                        <tr></tr>
                        <tr></tr>
                         <tr>
                                 <th>Phone Number  </th>
                                 <td></td>
-                                <td><input type="text" class="inputs" value="0768871660" name="phone"></td>
+                                <td><?php echo $sellerInfo['phonenumber'] ?></td>
                         </tr>
                         <tr></tr>
                         <tr></tr>   
                         <tr>
                                 <th>Email   </th>
                                 <td></td>
-                                <td><input type="text" class="inputs" value="kusaldissanayake2@gmail.com" name="email"></td>
+                                <td><?php echo $sellerInfo['email'] ?></td>
                         </tr>
                         <tr></tr>
                         <tr></tr>
