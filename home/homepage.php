@@ -124,7 +124,14 @@ if (isset($_POST['save'])) {
                                         <input type="hidden" name="ad_id" value="<?php echo $row['ad_id'];  ?>">
                                         <input type="submit" class="btn btn-warning w-15 mb-1" value="Add to favorites">
                                     </form> -->
-                                    <a href="../Seller_details/Seller_details.php" class="btn btn-primary w-24 p-1 b-2">Contact Seller</a>
+                                    <?php
+                                    echo '<form action="../home/seller.php">';
+                                    echo '<input type="hidden" name="ad_id" value="';
+                                    echo $row['ad_id'];
+                                    echo '">';
+                                    echo '<input type="submit" class="btn btn-primary w-24 p-1 b-2" value="Contact Seller">';
+                                    echo '</form>';
+                                    ?>
                                 </div>
                                 </p>
                             </div>
