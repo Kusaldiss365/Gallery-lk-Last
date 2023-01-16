@@ -109,16 +109,25 @@ if (isset($_POST['save'])) {
                                 <h2 class="ad_title"><?php echo $row['adName'];  ?></h2>
                                 <h5 class="ad_title"><?php echo $row['category'];  ?></h5>
                                 <p class="content">
+                                    <?php echo "ID: "?>
+                                    <?php echo $row['ad_id'];  ?>
+                                    <?php echo "<br>"?>
                                     <?php echo $row['ad_desc'];  ?>
                                 <div class="card-footer bg-transparent border-black">
                                     <!-- <a href="../Favourites/fav.php" class="btn btn-warning w-15 p-1">Add to Favoriutes</a> -->
-                                    <form action="../Favourites/FA.php" method="POST">
-                                        <input type="hidden" name="user_id" value="<?php echo ($_SESSION['user_id']);?>">
-                                        <input type="hidden" name="ad_id" value="<?php echo $row['ad_id'];  ?>">
-                                        <input type="submit" class="btn btn-warning w-15 mb-1" value="Add to favorites">
-                                    </form> -->
                                     <?php
-                                    echo '<form action="../home/seller.php">';
+                                    if (isset($_SESSION['firstname'])) {
+                                    echo '<form action="../Favourites/FA.php" method="POST">';
+                                    echo  '<input type="hidden" name="user_id" value="';
+                                    echo ($_SESSION['user_id']);
+                                    echo '">';
+                                    echo '<input type="hidden" name="ad_id" value="';
+                                    echo $row['ad_id'];
+                                    echo '">';
+                                    echo '<input type="submit" class="btn btn-warning w-15 mb-1" value="Add to favorites">';
+                                    echo '</form>'; }
+
+                                    echo '<form action="../Seller_details/Seller_details.php" method="POST">';
                                     echo '<input type="hidden" name="ad_id" value="';
                                     echo $row['ad_id'];
                                     echo '">';

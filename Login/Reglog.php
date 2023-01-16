@@ -25,8 +25,8 @@ session_start();
             $_SESSION['userid'] = $user['user_id'];
             $_SESSION['firstname'] = $user['firstname'];
             $_SESSION['user_id'] = $user['user_id'];
-           header('Location:../Admin/admin.php');
-           // header('Location:../home/homepage.php');
+         //   header('Location:../Admin/admin.php');
+           header('Location:../home/homepage.php');
             }
          }
          

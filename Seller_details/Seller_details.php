@@ -42,19 +42,36 @@ include '../config.php';
                 echo "Logged in as ";
                 echo $_SESSION['firstname'];}
             ?>
+
+<?php
+
+    require "../post_ads/db.php";
+
+    $ad_id = $_POST['ad_id'];
+
+    $find = "SELECT user_id From ads WHERE ad_id=$ad_id";
+    $query_run1 = mysqli_query($conn, $find);
+    $userid = mysqli_fetch_assoc($query_run1);
+    // $select1 = mysqli_fetch_assoc($query_run1)
+    // $insert = "INSERT INTO fav(user_id,ad_id) VALUES('$user_id','$ad_id')";
+
+?>
+
+
+
         </div>
             <div class="Sellerdiv">
                 <form action="">
                 <table>
                         <tr>    
-                                <!-- <th>Ad Name  </th>
+                                <th>Ad Name  </th>
                                 <td></td>
-                                <td><input type="text" class="inputs" name="sellerName"></td> -->
+                                <td><?php echo $ad_id?></td>
                        </tr>
                         <tr>    
                                 <th>Seller Name </th>
                                 <td></td>
-                                <td><input type="text" class="inputs" value="Kusal" name="sellerName"></td>
+                                <td><?php echo $userid['user_id'] ?></td>
                        </tr>
                        <tr></tr>
                        <tr></tr>
