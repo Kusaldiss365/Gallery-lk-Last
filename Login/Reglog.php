@@ -7,31 +7,34 @@ session_start();
 
    $select = " SELECT * FROM userdetails WHERE username = '{$username}' && password = '{$password}'";
    $result = mysqli_query($conn, $select);
+
    $usertype = "SELECT usertype FROM userdetails WHERE username = '{$username}' && password = '{$password}'";
-   $type = mysqli_query($conn, $usertype);
+   $type_conn = mysqli_query($conn, $usertype);
+   $query_run = mysqli_fetch_assoc($type_conn);
+
+   
 
    if(mysqli_num_rows($result) == 0){
 
       echo "Incorrect Password";
       
-       $error[] = 'user already exist!';
+      //  $error = 'user already exist!';
 
    }else{
-      
-      if (mysqli_num_rows($type)>0) {
+      $type = $query_run['usertype'];
+      if ($type=='1') {
          if($result){
             if(mysqli_num_rows($result) == 1){
             $user = mysqli_fetch_assoc($result);
             $_SESSION['userid'] = $user['user_id'];
             $_SESSION['firstname'] = $user['firstname'];
             $_SESSION['user_id'] = $user['user_id'];
-
-            header('Location:../home/homepage.php');
+           header('Location:../Admin/admin.php');
             }
          }
          
 
-      }else if (mysqli_num_rows($type)==1) {
+      }else if ($type=='0') {
          
          if($result){
             if(mysqli_num_rows($result) == 1){
@@ -39,7 +42,6 @@ session_start();
             $_SESSION['userid'] = $user['user_id'];
             $_SESSION['firstname'] = $user['firstname'];
             $_SESSION['user_id'] = $user['user_id'];
-      
             header('Location:../home/homepage.php');
             }
          }

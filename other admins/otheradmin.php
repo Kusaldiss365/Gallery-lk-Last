@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="other admin.css">
+    <link rel="stylesheet" href="other_admin.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <title>Admin</title>
 </head>
@@ -41,58 +41,25 @@
                         <div class="icon"><img src="../Src/admin.png" alt="" class="tip">Other Admin</div>
                     </div>
                    
+                    <button class="allusers_btn"><a class="allusers" href="../other admins/all_users.php">All Users</a></button>
+
                     <div class="table" id="tableid">
                         <table>
                             <tr> 
                                 <th colspan="2">Username</th>
-                                <th > Status</th>
+                                <th></th>
                             </tr>
                             <tr>
                                 <td >Kusal</td>
+                                <td></td>
                                 <td >
                                     <div> 
                                        <button type="submit"  class ="button button1"><a class="link" href="../contact_admins/conadd1.php">Contact Admin </a></button>
                                     </div>   
-                                </td> 
-                                
-                                <td colspan="2" > Active</td>         
+                                </td>     
     
                             </tr>
-                            <tr>
-                                <td >Kaveesha</td>
-                                <td >
-                                    <div> 
-                                       <button type="submit" class ="button button1"><a class="link" href="../contact_admins/conadd2.php">Contact Admin </a></button>
-                                    </div>   
-                                </td> 
-                                
-                                <td colspan="2" > Active</td>         
-    
-                            </tr>
-                            <tr>
-                                <td >Sadun</td>
-                                <td >
-                                    <div> 
-                                       <button type="submit" class ="button button1"><a class="link" href="../contact_admins/conadd3.php">Contact Admin </a></button>
-                                    </div>   
-                                </td> 
-                               
-                                <td colspan="2" > Active</td>         
-    
-                            </tr>
-                            <tr>
-                                <td >Udeesha</td>
-                                <td >
-                                    <div> 
-                                    
-                                       <button type="submit" class ="button button1"><a class="link" href="../contact_admins/conadd4.php"> Contact Admin</a></button>
-                                    </div>   
-                                </td> 
-                               
-                                <td colspan="2" > Active</td>         
-    
-                            </tr>
-                            
+
                         </table>
                     </div>
                    

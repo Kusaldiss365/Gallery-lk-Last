@@ -9,9 +9,10 @@
     <title>complain</title>
 </head>
 
-<body>
+<body style="  background-image: linear-gradient(180deg, red, yellow); background-repeat:no-repeat; height:95vh;">
     <div class="header">
-    <div class="logo"><a href="../home/homepage.php"><img src="../Src/Logo.png" width="60px" height="60px"></a></div>
+        <h1 class="logo"><a href="../home/homepage.php"><img src="../Src/Logo.png" width="50px" height="50px"
+                    width="20px"></a></h1>
         <ul class="main-nav">
             <li><a href="../home/homepage.php">Home</a></li>
             <li><a href="../User/user.php">My Account</a></li>
@@ -26,8 +27,8 @@
             </li>
         </ul>
     </div>
-    <div class="content">
-        <form action="comp_function.php" method="POST">
+    <div class="content" >
+        <form action="comp_function.php" method="POST" style="background-color: white; display:flex; align-items:center;justify-content:center; flex-direction:column;">
             Ad id :
             <input type="text" name="id" class="id"><br><br>
             Describe your issue :

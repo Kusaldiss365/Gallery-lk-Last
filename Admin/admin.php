@@ -14,7 +14,7 @@
         <div class="header">
                 <h1 class="logo"><a href="../home/home.php"><img src="../Src/Logo.png" width="50px" height="50px" width="20px"></a></h1>
             <ul class="main-nav">
-                <li><a href="#">Home</a></li>
+                <li><a href="../home/homepage.php">Home</a></li>
                 <li><a href="#">My Account</a></li>
                 <li><a href="#">Customer Care</a></li>
                 <li><div class="dropdown">
@@ -41,13 +41,13 @@
                         <div class="box">
                         <button type="button">
                             <div class="image"><img src= "../src/user1.png" class="tip" ></div>
-                            <div class="text"><a href="../Manage-User/manageuser.php">Manage Users</a></div>
+                            <div class="text"><a href="../contact_user/usercon.php">Contact Users</a></div>
                         </button>
                         </div>
                         <div class="box">
                         <button type="button">
                             <div class="image"><img src= "../src/Complains.png" class="tip" ></div>
-                            <div class="text"> <a href="../Check Complains/checkcomplaints.php">Check Complains</a></div>
+                            <div class="text"> <a href="../checkcomplain_details/check.php">Check Complains</a></div>
                         </button>
                         </div>
                     </div>
