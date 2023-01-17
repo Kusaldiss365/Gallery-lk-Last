@@ -54,7 +54,7 @@ if (isset($_POST['save'])) {
                     <button class="dropbtn"><img src="../Src/setting.png" width="25px"></button>
                     <div class="dropdown1">
                         <a href="../contact/index.html">Contact Us</a>
-                        <button class="logoutbtn"onclick="logout()"><a href="../home/homepage.php">Logout</a></button>
+                        <button class="logoutbtn"onclick="logout()">Logout</a></button>
                     </div>
             </div>
             </div>
@@ -164,7 +164,7 @@ if (isset($_POST['save'])) {
 <script>
     function logout(){
         if(confirm("Do you want to logout?")){
-            location.href = '../User/userlogout.php';
+            window.location = '../User/userlogout.php';
         }
     }
 </script>

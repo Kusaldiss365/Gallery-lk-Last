@@ -12,7 +12,8 @@ session_unset();
 // destroy the session
 session_destroy();
 
-header("Location: ../home/homepage.php");
+header("Location:../home/homepage.php");
+
 die();
 
 ?>
