@@ -59,7 +59,7 @@
             if ($all_users) {
                 ?>
 
-            <table>
+            <table class = "center">
                                         <tr>
                                               <th>First Name </th>
                                               <th>Last Name </th>
@@ -92,5 +92,4 @@
 
         </body>
         </html>
-        
         
