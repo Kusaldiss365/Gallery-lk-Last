@@ -68,21 +68,19 @@
                                 <td>
                                     <div class="catagories">
                                         <input type="radio" id="Painting" name="catg" value="Painting" class="check">
-                                        <label for="Painting"> Painting</label><br>
+                                        <label for="Painting">Painting</label><br>
                                         <input type="radio" id="Drawing" name="catg" value="Drawing" class="check">
-                                        <label for="Drawing"> Drawing</label><br>
-                                        <input type="radio" id="Sculptures" name="catg" value="Sculptures"
-                                            class="check">
-                                        <label for="Sculptures"> Sculptures</label><br>
-                                        <input type="radio" id="Photographs" name="catg" value="Photographs"
-                                            class="check">
+                                        <label for="Drawing">Drawing</label><br>
+                                        <input type="radio" id="Handcraft" name="catg" value="Handcraft" class="check">
+                                        <label for="Sculptures">Handcrafts</label><br>
+                                        <input type="radio" id="Sculpture" name="catg" value="Sculpture" class="check">
+                                        <label for="Sculptures">Sculptures</label><br>
+                                        <input type="radio" id="Photograph" name="catg" value="Photograph" class="check">
                                         <label for="Photographs">Photographs</label><br>
-                                        <input type="radio" id="Carft" name="catg" value="Carft" class="check">
-                                        <label for="Carft">Handcraft</label><br>
-                                        <input type="radio" id="Mixed" name="catg" value="Mixed" class="check">
-                                        <label for="Mixed">Papercuts</label><br>
+                                        <input type="radio" id="Papercut" name="catg" value="Papercut" class="check">
+                                        <label for="Carft">Papercuts</label><br>
                                         <input type="radio" id="Other" name="catg" value="Other" class="check">
-                                        <label for="Other">Others</label><br><br>
+                                        <label for="Other">Other</label><br><br>
                                     </div>
                                 </td>
                             </tr>

@@ -1,19 +1,24 @@
 <?php session_start();
 include 'config.php';
-$searchErr = '';
-$employee_details = '';
-if (isset($_POST['save'])) {
-    if (!empty($_POST['search'])) {
-        $search = $_POST['search'];
-        $stmt = $con->prepare("SELECT * FROM ads WHERE (`category` LIKE '%" . $search . "%') ");
-        $stmt->execute();
-        $employee_details = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        //print_r($employee_details);
+// $searchErr = '';
+// // $employee_details = '';
+// if (isset($_POST['save'])) {
+//     if (!empty($_POST['search'])) {
+//         $search = $_POST['search'];
+//         $srch = "SELECT * FROM ads WHERE 'adName' LIKE '%$search%'";
+//         $query_run = mysqli_query($conn, $srch);
+//         $check = mysqli_num_rows($query_run);
+//         if ($check_ad) {
+//                 while ($row = mysqli_fetch_assoc($query_run)) 
+//         $stmt = ("SELECT * FROM ads WHERE `category` LIKE '%" . $search . "%'");
+//         $stmt->execute();
+//         $employee_details = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//         print_r($employee_details);
 
-    } else {
-        $searchErr = "Please enter the information";
-    }
-}
+//     } else {
+//         $searchErr = "Please enter correct choice";
+//     }
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,11 +36,11 @@ if (isset($_POST['save'])) {
 <body>
         <div class="nav-bar">
             <div class="logo"><a href="../home/homepage.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></div>
-            <form class="form-horizontal" action="../home/homepage_copy.php" method="post">
+            <form class="form-horizontal" action="../home/homepagecopy.php" method="Post">
             <div class="row search-bar">
                 <div class="form-group">
                     <input type="text" class="search-box" name="search" placeholder="search here">
-                    <button type="submit" name="save" class="search-btn"> Search</button>
+                    <button type="submit" name="save" class="search-btn">Search</button>
                 </div>
             </div>
         </form>
@@ -78,16 +83,6 @@ if (isset($_POST['save'])) {
             </ul>
         </div>
     </nav>
-
-    <div class="test">
-        <?php
-        if (isset($_SESSION['firstname'])) {
-            echo "Logged in as ";
-            echo $_SESSION['firstname'];
-        }
-
-        ?>
-    </div>
 
     <div class="container fluid">
         <div class="row">
