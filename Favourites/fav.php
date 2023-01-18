@@ -47,12 +47,12 @@
 
         <?php 
             require "../post_ads/db.php";
-            // $user=$_SESSION['user_id'];
+            $user=$_SESSION['user_id'];
             // $query = "SELECT * FROM fav WHERE user_id=$user";
             // $query_run = mysqli_query($conn, $query);
             // $check_ad = mysqli_num_rows($query_run) > 0;
 
-            $join = "SELECT ads.ad_id,adName,category,img_dir,price FROM ads INNER JOIN fav ON ads.ad_id = fav.ad_id";
+            $join = "SELECT * FROM ads INNER JOIN fav ON ads.ad_id = fav.ad_id where fav.user_id=$user";
             $query_run = mysqli_query($conn, $join);
             $check_ad = mysqli_num_rows($query_run) > 0;
 
@@ -79,8 +79,10 @@
                                       </table>
                                   </div>
                                   <div class="btn">
-                                      <button  type="button" class="favbutton">Remove</a></button>
-
+                                    <form action="../Favourites/remove.php" method="POST" >
+                                    <input type="hidden" name="fav_id" value="<?php echo $row['id'];?>">   
+                                      <input  type="submit" class="btn btn-danger btn-sm" style="width:100px" value="Remove"></input>
+                                    </form>
                                 <form action="../Favourites/Seller_det.php" method="POST">
                                 <input type="hidden" name="ad_id" value="<?php echo $row['ad_id'];?>">
                                 <input type="submit" class="btn btn-primary btn-sm" style="width:100px" value="Contact Seller">
