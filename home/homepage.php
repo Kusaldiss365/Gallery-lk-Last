@@ -29,13 +29,13 @@
         <?php
         require '../config.php';
 
+        if (isset($_SESSION['firstname'])){
         $userid = $_SESSION['user_id'];
         $query2 = "SELECT usertype FROM userdetails WHERE user_id='$userid'";
         $query2_run = mysqli_query($conn, $query2);
-        $user = mysqli_fetch_assoc($query2_run);
+        $usercheck = mysqli_fetch_assoc($query2_run);
 
-        if (isset($_SESSION['firstname'])){
-            if($user == 1){
+            if($usercheck['usertype'] == 1){
                     echo '<button class="useracc" style="color:light-blue; text-decoration:none;"><a href="../Admin/admin.php">Admin Panel</a></button>';
                     echo '<button class="useracc" style="color:blue; text-decoration:none;"><a href="../User/user.php">My Account</a></button>';
                 }
@@ -43,7 +43,7 @@
                     echo '<button class="useracc" style="color:blue; text-decoration:none;"><a href="../User/user.php">My Account</a></button>';
                 }
             }
-            else {
+        else {
                     echo '<button class="login"><a href = "../Login/login.php" >Login</a></button>';
                     echo '<button class="register"><a href = "../signup/signup.php">Register</a></button>}';
                 }
