@@ -1,19 +1,5 @@
 <?php session_start();
-include 'config.php';
-$searchErr = '';
-$employee_details = '';
-if (isset($_POST['save'])) {
-    if (!empty($_POST['search'])) {
-        $search = $_POST['search'];
-        $stmt = $con->prepare("SELECT * FROM ads WHERE (`category` LIKE '%" . $search . "%') ");
-        $stmt->execute();
-        $employee_details = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        //print_r($employee_details);
 
-    } else {
-        $searchErr = "Please enter the information";
-    }
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,20 +17,33 @@ if (isset($_POST['save'])) {
 <body>
         <div class="nav-bar">
             <div class="logo"><a href="../home/homepage.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></div>
-            <form class="form-horizontal" action="../home/homepage_copy.php" method="post">
+            <form class="form-horizontal" action="../home/homepagecopy.php" method="Post">
             <div class="row search-bar">
                 <div class="form-group">
                     <input type="text" class="search-box" name="search" placeholder="search here">
-                    <button type="submit" name="save" class="search-btn"> Search</button>
+                    <button type="submit" name="save" class="search-btn">Search</button>
                 </div>
             </div>
         </form>
             <div class="buttons">
-                <?php
-                if (isset($_SESSION['firstname'])) {
+        <?php
+        require '../config.php';
+
+        if (isset($_SESSION['firstname'])){
+        $userid = $_SESSION['user_id'];
+        $query2 = "SELECT usertype FROM userdetails WHERE user_id='$userid'";
+        $query2_run = mysqli_query($conn, $query2);
+        $usercheck = mysqli_fetch_assoc($query2_run);
+
+            if($usercheck['usertype'] == 1){
+                    echo '<button class="useracc" style="color:light-blue; text-decoration:none;"><a href="../Admin/admin.php">Admin Panel</a></button>';
                     echo '<button class="useracc" style="color:blue; text-decoration:none;"><a href="../User/user.php">My Account</a></button>';
                 }
-                else {
+                else{
+                    echo '<button class="useracc" style="color:blue; text-decoration:none;"><a href="../User/user.php">My Account</a></button>';
+                }
+            }
+        else {
                     echo '<button class="login"><a href = "../Login/login.php" >Login</a></button>';
                     echo '<button class="register"><a href = "../signup/signup.php">Register</a></button>}';
                 }
@@ -79,10 +78,9 @@ if (isset($_POST['save'])) {
         </div>
     </nav>
 
-
     <div class="container fluid">
         <div class="row">
-            <?php
+        <?php
             require "../post_ads/db.php";
 
             $query = "SELECT * FROM ads WHERE category='Sculpture'";

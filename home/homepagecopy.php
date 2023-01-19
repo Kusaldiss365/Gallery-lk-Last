@@ -1,24 +1,5 @@
 <?php session_start();
-include 'config.php';
-// $searchErr = '';
-// // $employee_details = '';
-// if (isset($_POST['save'])) {
-//     if (!empty($_POST['search'])) {
-//         $search = $_POST['search'];
-//         $srch = "SELECT * FROM ads WHERE 'adName' LIKE '%$search%'";
-//         $query_run = mysqli_query($conn, $srch);
-//         $check = mysqli_num_rows($query_run);
-//         if ($check_ad) {
-//                 while ($row = mysqli_fetch_assoc($query_run)) 
-//         $stmt = ("SELECT * FROM ads WHERE `category` LIKE '%" . $search . "%'");
-//         $stmt->execute();
-//         $employee_details = $stmt->fetchAll(PDO::FETCH_ASSOC);
-//         print_r($employee_details);
 
-//     } else {
-//         $searchErr = "Please enter correct choice";
-//     }
-// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,11 +26,24 @@ include 'config.php';
             </div>
         </form>
             <div class="buttons">
-                <?php
-                if (isset($_SESSION['firstname'])) {
+        <?php
+        require '../config.php';
+
+        if (isset($_SESSION['firstname'])){
+        $userid = $_SESSION['user_id'];
+        $query2 = "SELECT usertype FROM userdetails WHERE user_id='$userid'";
+        $query2_run = mysqli_query($conn, $query2);
+        $usercheck = mysqli_fetch_assoc($query2_run);
+
+            if($usercheck['usertype'] == 1){
+                    echo '<button class="useracc" style="color:light-blue; text-decoration:none;"><a href="../Admin/admin.php">Admin Panel</a></button>';
                     echo '<button class="useracc" style="color:blue; text-decoration:none;"><a href="../User/user.php">My Account</a></button>';
                 }
-                else {
+                else{
+                    echo '<button class="useracc" style="color:blue; text-decoration:none;"><a href="../User/user.php">My Account</a></button>';
+                }
+            }
+        else {
                     echo '<button class="login"><a href = "../Login/login.php" >Login</a></button>';
                     echo '<button class="register"><a href = "../signup/signup.php">Register</a></button>}';
                 }
@@ -86,7 +80,7 @@ include 'config.php';
 
     <div class="container fluid">
         <div class="row">
-            <?php
+        <?php
             require "../post_ads/db.php";
 
         if (isset($_POST['save'])) {
@@ -143,10 +137,8 @@ include 'config.php';
 
                 }
             } else {
-                echo "No such Ads Found";
-            }
-        }
-    }
+                echo "No Ads Found";
+            }}}
             ?>
         </div>
     </div>
