@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="myads.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -42,9 +43,13 @@
         <div class="body">
             <div class="inner">
                 <div class="img">
-                    <div class="icon"><img src="../Src/book.png" alt="" class="tip">My Ads</div>
+                    <div class="icon">
+                        <img src="../Src/book.png" alt="" class="tip">My Ads
+                        
+                    </div>
+                    <div ><a href="../User/user.php"><button class="button1" >back</button></a>
+                    </div>
                 </div>
-
                 <?php 
                 $conn = mysqli_connect('localhost','root','','gallerylk');
                 $sql = "SELECT * FROM ads";

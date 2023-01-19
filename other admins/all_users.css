@@ -231,6 +231,7 @@ table {
 	overflow: hidden;
 	box-shadow: 0 0 20px rgba(0,0,0,0.1);
 	border: 2px solid black;
+	align-items: center;
 }
 
 th,
@@ -239,6 +240,8 @@ td {
 	background-color: rgba(85, 210, 230, 0.2);
 	color: black;
 	border: 2px solid black;
+	justify-content: center;
+	align-items: center;
 }
 
 th {
@@ -246,22 +249,19 @@ th {
 	border: 2px solid black;
 }
 
-thead {
+
 	th {
 		background-color: #55608f;
 	}
-}
 
-tbody {
+
 	tr {
-		&:hover {
+		
 			background-color: rgba(255,255,255,0.3);
 		}
-	}
-	td {
-		position: relative;
-		&:hover {
-			&:before {
+td {
+		position: relative;}
+td:hover {
 				content: "";
 				position: absolute;
 				left: 0;
@@ -270,10 +270,7 @@ tbody {
 				bottom: -9999px;
 				background-color: rgba(255,255,255,0.2);
 				z-index: -1;
-			}
-		}
-	}
-}
+				}
 
 
 
@@ -306,7 +303,7 @@ tbody {
 .favbutton{
     background-color: rgb(77, 26, 246);
     border: #000000 solid;
-    border-radius: 12px;
+    border-radius: 6px;
 }
 .star{
     width: 30px;
@@ -315,19 +312,9 @@ tbody {
  .btn .btn2 a{
 	font-weight: 600;
 	color: rgb(0, 0, 0);
- }
- 
- 
-    
-    
+}
 
 
- 
-
-
-
-
- 
  @media (min-width: 769px) {
 	.header,
 	.main-nav {

@@ -56,4 +56,4 @@ if(mysqli_num_rows($result) == 1){
         
         // header("Location: ../post.php>ad=success");
         
-echo"<script>location.href = 'success.html'</script>";
+echo"<script>location.href = '../User/user.php'</script>";

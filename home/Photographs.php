@@ -1,20 +1,4 @@
 <?php session_start();
-include 'config.php';
-$searchErr = '';
-$employee_details = '';
-
-    
-        $search = 'Photographs';
-        #$stmt = $con->prepare("SELECT * FROM ads WHERE (`category` = 'Photographs') ");
-        $stmt = $con->prepare("SELECT * FROM ads WHERE (`category` LIKE '%" . $search . "%') ");
-
-        $stmt->execute();
-        $employee_details = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        //print_r($employee_details);
-
-    
-    //    $searchErr = "Please enter the information";
-    
 
 ?>
 <!DOCTYPE html>
@@ -31,23 +15,35 @@ $employee_details = '';
 </head>
 
 <body>
-    <div class="nav-bar">
-        <div class="logo"><a href="../home/homepage.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></div>
-        <form class="form-horizontal" action="../home/homepage_copy.php" method="post">
+        <div class="nav-bar">
+            <div class="logo"><a href="../home/homepage.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></div>
+            <form class="form-horizontal" action="../home/homepagecopy.php" method="Post">
             <div class="row search-bar">
                 <div class="form-group">
                     <input type="text" class="search-box" name="search" placeholder="search here">
-                    <button type="submit" name="save" class="search-btn"> Search</button>
+                    <button type="submit" name="save" class="search-btn">Search</button>
                 </div>
             </div>
         </form>
+            <div class="buttons">
+        <?php
+        require '../config.php';
 
-        <div class="buttons">
-                <?php
-                if (isset($_SESSION['firstname'])) {
+        if (isset($_SESSION['firstname'])){
+        $userid = $_SESSION['user_id'];
+        $query2 = "SELECT usertype FROM userdetails WHERE user_id='$userid'";
+        $query2_run = mysqli_query($conn, $query2);
+        $usercheck = mysqli_fetch_assoc($query2_run);
+
+            if($usercheck['usertype'] == 1){
+                    echo '<button class="useracc" style="color:light-blue; text-decoration:none;"><a href="../Admin/admin.php">Admin Panel</a></button>';
                     echo '<button class="useracc" style="color:blue; text-decoration:none;"><a href="../User/user.php">My Account</a></button>';
                 }
-                else {
+                else{
+                    echo '<button class="useracc" style="color:blue; text-decoration:none;"><a href="../User/user.php">My Account</a></button>';
+                }
+            }
+        else {
                     echo '<button class="login"><a href = "../Login/login.php" >Login</a></button>';
                     echo '<button class="register"><a href = "../signup/signup.php">Register</a></button>}';
                 }
@@ -57,7 +53,7 @@ $employee_details = '';
                     <button class="dropbtn"><img src="../Src/setting.png" width="25px"></button>
                     <div class="dropdown1">
                         <a href="../contact/index.html">Contact Us</a>
-                        <button class="logoutbtn"onclick="logout()"><a href="#">Logout</a></button>
+                        <button class="logoutbtn"onclick="logout()">Logout</a></button>
                     </div>
             </div>
             </div>
@@ -65,6 +61,7 @@ $employee_details = '';
         </div>
     </div>
 
+    
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             </button>
@@ -81,48 +78,86 @@ $employee_details = '';
         </div>
     </nav>
 
-    <div class="test">
+    <div class="container fluid">
+        <div class="row">
         <?php
-        if (isset($_SESSION['firstname'])) {
-            echo "Logged in as ";
-            echo $_SESSION['firstname'];
-        }
+            require "../post_ads/db.php";
 
-        ?>
-    </div>
+            $query = "SELECT * FROM ads WHERE category='Photograph'";
+            $query_run = mysqli_query($conn, $query);
+            $check_ad = mysqli_num_rows($query_run) > 0;
 
-    <div class="container">
-    <aside style="width:50%;">
-        <div class="grid-container">
-            <?php
-            if (!$employee_details) {
-            } else {
-                foreach ($employee_details as $key => $value) {
+            if ($check_ad) {
+                while ($row = mysqli_fetch_assoc($query_run)) {
             ?>
-                    <div class="grid-item">
-                        
-                            <div class="cards-img" style="width:250px;"><img src="<?php echo $value['img_dir']; ?>" width="100px" height="250px" class="card-img-top" alt="Product Image"></div>
-                            <div class="ad-area">
-                                <div class="ad-name"><?php echo $value['adName']; ?></div>
-                                <div class="ad-category"><?php echo $value['category']; ?></div>
+
+                    <div class="col-md-4 py-5">
+                        <div class="card" style="width:350px">
+                            <img src="<?php echo $row['img_dir']; ?>" width="300px" height="200px" class="card-img-top" alt="Product Image">
+                            <div class="card-body py-4">
+                                <h2 class="ad_title"><?php echo $row['adName'];  ?></h2>
+                                <h5 class="ad_title"><?php echo $row['category'];  ?></h5>
+                                <p class="content">
+                                    <?php echo "ID: "?>
+                                    <?php echo $row['ad_id'];  ?>
+                                    <?php echo "<br>"?>
+                                    <?php echo "Price (LKR): "?>
+                                    <?php echo $row['price'];  ?>
+                                    <?php echo "<br>"?>
+                                    <?php echo $row['ad_desc'];  ?>
+                                <div class="card-footer bg-transparent border-black">
+                                    <!-- <a href="../Favourites/fav.php" class="btn btn-warning w-15 p-1">Add to Favoriutes</a> -->
+                                    <?php
+                                    if (isset($_SESSION['firstname'])) {
+                                    echo '<form action="../Favourites/FA.php" method="POST">';
+                                    echo  '<input type="hidden" name="user_id" value="';
+                                    echo ($_SESSION['user_id']);
+                                    echo '">';
+                                    echo '<input type="hidden" name="ad_id" value="';
+                                    echo $row['ad_id'];
+                                    echo '">';
+                                    echo '<input type="submit" class="btn btn-warning w-15 mb-1" value="Add to favorites">';
+                                    echo '</form>'; }
+
+                                    echo '<form action="../Seller_details/Seller_details.php" method="POST">';
+                                    echo '<input type="hidden" name="ad_id" value="';
+                                    echo $row['ad_id'];
+                                    echo '">';
+                                    echo '<input type="submit" class="btn btn-primary w-24 p-1 b-2" value="Contact Seller">';
+                                    echo '</form>';
+                                    ?>
+                                </div>
+                                </p>
                             </div>
                         </div>
                     </div>
             <?php
+
                 }
+            } else {
+                echo "No Ads Found";
             }
             ?>
         </div>
-    </aside>
     </div>
-
-    <div class="bottom absolute-bottom">
+    </div>
+    
+    
+    </div>
+    <div class="bottom absolute-bottom" >
         |<a href="../about us/about.php">About us</a>|
         <a href="../contact/index.html">Contact us </a>|
         <a href="../privacy/privacy.php">Privacy & Policy</a>|
         <a href="../help/help.php">Help</a>|
     </div>
-    </div>
+<script>
+    function logout(){
+        if(confirm("Do you want to logout?")){
+            window.location = '../User/userlogout.php';
+        }
+    }
+</script>
+
 </body>
 
 </html>
