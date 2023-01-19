@@ -75,7 +75,12 @@
                                         <td><?php echo $row['lastname']; ?></td>
                                         <td><?php echo $row['phonenumber']; ?></td>
                                         <td><?php echo $row['email']; ?></td>
-                                        <td><button  type="button" class="favbutton">Make Admin</a></button></td>
+                                        <td>
+                                        <form action="../other admins/otheradmin.php" method="POST">
+                                        <input type="hidden" name='user_id' value="<?php echo $row['user_id']; ?>">
+                                        <input type="submit" class="favbutton" value="Make Admin">
+                                        </form>
+                                        </td>
                                         <br>
                                         </tr>
                                         

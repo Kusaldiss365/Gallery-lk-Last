@@ -1,5 +1,17 @@
 
+<?php session_start();
 
+require "../config.php";
+
+if(isset($_POST['user_id'])){
+
+    $user = $_POST['user_id'];
+    $update = "UPDATE userdetails SET usertype='1' WHERE user_id=$user";
+    $query = mysqli_query($conn, $update);
+    // $run = mysqli_fetch_assoc($query);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,36 +47,58 @@
             <img class="pic" src="../Src/user2.png">
             <p class="username">Admin</p>
         </div>
-        <div class="body">
             <div class="inner">
                     <div>
                         <div class="icon"><img src="../Src/admin.png" alt="" class="tip">Other Admin</div>
                     </div>
                    
                     <button class="allusers_btn"><a class="allusers" href="../other admins/all_users.php">All Users</a></button>
-
+                <?php
+                    require "../config.php";
+    
+                    $select = "SELECT * FROM userdetails WHERE usertype=1";
+                    $query2 = mysqli_query($conn, $select);
+                    $admins = mysqli_num_rows($query2)>0;
+                    
+                    if($admins){
+                    ?>
                     <div class="table" id="tableid">
                         <table>
                             <tr> 
-                                <th colspan="2">Username</th>
-                                <th></th>
+                                <th>Username</th>
+                                <th >Contact</th>
+                                <th>Remove</th>
                             </tr>
+                            <?php
+                            while($rows = mysqli_fetch_array($query2)){
+                            ?>  
                             <tr>
-                                <td >Kusal</td>
-                                <td></td>
+                                <td>
+                                <?php 
+                                echo $rows['firstname'];
+                                echo " ";
+                                echo $rows['lastname'];
+                                ?>
+                                </td>
                                 <td >
-                                    <div> 
-                                       <button type="submit"  class ="button button1"><a class="link" href="../contact_admins/conadd1.php">Contact Admin </a></button>
-                                    </div>   
-                                </td>     
+                                <form action="../contact_admins/conadd.php" method="POST">
+                                        <input type="hidden" name='user_id' value="<?php echo $rows['user_id']; ?>">
+                                        <input type="submit" class="favbutton" value="Contact">
+                                </form>
+                                </td>
+                                <td>
+                                <form action="../other admins/remove_admin.php" method="POST">
+                                        <input type="hidden" name='user_id' value="<?php echo $rows['user_id']; ?>">
+                                        <input type="submit" class="favbutton" value="Remove Admin">
+                                </form>
+                                </td>  
     
                             </tr>
-
+                        <?php }}?>
                         </table>
                     </div>
                    
                 </div>
-            </div>    
     
             </div>
         </div>        
