@@ -6,7 +6,7 @@ body {
 	line-height: 1.6;
 	margin: 0;
 	min-height: 100vh;
-
+	background-color: #EDE6F2;
 }
 
 ul {
@@ -88,12 +88,7 @@ ul {
 .header {
 	width: 100vw;
 	height: 70px;
-	border: 1px solid rgb(68, 29, 29);
-	background-image: linear-gradient(to right, rgb(248, 192, 140) , rgb(241, 169, 121));
-	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-
+	background-color: #222E50;
 }
 .profile{
 
@@ -126,7 +121,7 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: whitesmoke;
+    background-color: #EDE6F2;
 }
 
 
@@ -136,7 +131,7 @@ p{
 	width: 1200px;
 	height: 600px;
 	padding: 20px 0;
-	background-color: rgb(216, 177, 177);
+	background-color: #0072BB;
 	border-radius: 10px;
   }
 

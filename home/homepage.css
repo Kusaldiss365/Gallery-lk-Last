@@ -1,21 +1,17 @@
 body{
     /* background-size: cover;
     background-position: center; */
-    background-repeat: no-repeat; 
     /* background-image: url("../Src/adminback.jpg"); */
-    background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
+    background: #EDE6F2;
 }
 
-.background{
-    width: 100%;
-    height: 100vh;
+/* .background{
     display: flex;
     justify-content: center;
     flex-direction: column;
     border-bottom: 3px solid rgb(0, 0, 0);
     background-repeat: no-repeat; 
-}
+} */
 
 /*-----------------------navigation bar starts-------------*/
 .nav-bar{
@@ -26,6 +22,7 @@ body{
     display: flex;
     align-items: center;
     border-bottom: 3px solid rgb(0, 0, 0);
+    background-color: #222E50;
  
 }
 
@@ -183,7 +180,7 @@ li a{
    font-family:Geraldine personal USE Italic   ;
    font-weight: 600;
    font-size: 20px;
-   color: rgb(198, 192, 192);
+   color: rgb(0, 0, 0);
    text-decoration: none;
    padding: 20px;
    padding-left: 60px;
@@ -191,7 +188,7 @@ li a{
 }
 
 li a:hover{
-    color: rgb(255, 238, 0);
+    color: rgb(240, 117, 117);
     text-decoration: none;
 }
 
@@ -249,26 +246,28 @@ li a:hover{
   .dropdown:hover .dropdown1 {
     display: block;
   }
-.bottom{
+.bottom1{
     align-items: center;
     align-self: center;
     align-content: center;
     color: rgb(181, 185, 189);
+    position:static;
+    left:0px;
+    bottom: 0px;
 }
-.bottom a{
+.bottom1 a{
     font-family:Geraldine personal USE Italic   ;
     font-size: 20px;
     font-weight: 400;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-decoration: none;
     margin-bottom: 10px;
     padding: 10px;
     margin-left: 20px;
 }
 
-.bottom a:hover{
-    color: rgb(82, 31, 31);
-
+.bottom1 a:hover{
+    color: rgb(155, 71, 71);
 }
 
 .card:hover{  

@@ -15,14 +15,12 @@
 </head>
 
 <body>
-    <div class="outer">
+    <!-- <div class="outer"> -->
         <div class="header">
             <h1 class="logo"><a href="../home/home.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></h1>
             <ul class="main-nav">
                 <li><a href="../home/homepage.php">Home</a></li>
                 <li><a href="../User/user.php">My Account</a></li>
-                <li><a href="../contact/mail.php">Customer Care</a></li>
-                <li>
                     <div class="dropdown">
                         <button class="dropbtn"><img src="../Src/setting.png" width="25px"></button>
                         <div class="dropdown1">
@@ -32,20 +30,20 @@
                 </li>
             </ul>
         </div>
-        <div class="profile">
+    <!-- </div> -->
+    <div class="profile">
         <? if (isset($_SESSION['firstname'])) {
             echo "Logged in as";
             echo $_SESSION["firstname"];
         }
         ?>
-        
         </div>
-        <div class="body">
-            <div class="inner">
+
+<div class="body">
+    <div class="inner">
                 <div class="img">
                     <div class="icon">
                         <img src="../Src/book.png" alt="" class="tip">My Ads
-                        
                     </div>
                     <div ><a href="../User/user.php"><button class="button1" >back</button></a>
                     </div>
@@ -56,7 +54,7 @@
                 $result = $conn->query($sql);
                 while($row = $result->fetch_assoc()) {?>
 
-                <div class="box1">
+            <div class="box1">
                     <div class="image"><img src="../post ads/<?php echo $row['img_dir'];?>" alt="" class="itms"></div>
                     <div class="text">
                         <b><?php 
@@ -67,21 +65,16 @@
                         echo $row['ad_id'];?>
                         </b><br><b>Category:</b><?php echo $row['category'];?><br><b>Price:</b>Rs.<?php echo $row['price'];?>.00
                     </div>
-                    <div class="btn">
+                <div class="btn">
                         <div class="btn1"><a href="./post.php?id=<?php echo $row['ad_id'];?>&action=edit"
                                 type="button">Edit Ads</a></div>
                         <div class="btn2"><a href="./myads_func.php?id=<?php echo $row['ad_id'];?>&action=delete"
                                 type="button">Remove Ads</a></div>
-                    </div>
                 </div>
-
+                </div>
                 <?php } ?>
 
 
-
-            </div>
-        </div>
-    </div>
 </body>
 
 </html>

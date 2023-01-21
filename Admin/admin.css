@@ -6,7 +6,7 @@ body {
 	line-height: 1.6;
 	margin: 0;
 	min-height: 100vh;
-
+	background-color: #EDE6F2;
 }
 
 ul {
@@ -32,7 +32,7 @@ ul {
 }
 
 .main-nav a {
-	color:rgb(37, 0, 0);
+	color:rgb(255, 255, 255);
 	font-weight: 600;
 	text-decoration: none;
 }
@@ -89,11 +89,7 @@ ul {
 	width: 100vw;
 	height: 70px;
 	border: 1px solid rgb(68, 29, 29);
-	background-image: linear-gradient(to right, rgb(248, 192, 140) , rgb(241, 169, 121));
-	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-
+	background-color: #222E50;
 }
 .profile{
 	display:flex ;
@@ -137,6 +133,7 @@ p{
 	padding: 20px 0;
 	border-radius: 15px;
 	margin-top:50px;
+	background-color:  #0072BB;
   }
 
  .row1{
@@ -166,7 +163,7 @@ p{
 	margin: 0px 30px 0px 50px;
 	border-radius: 10px ;
 	border: solid 2px rgb(56, 12, 12);
-	background-image: radial-gradient(circle, rgb(247, 247, 215), rgb(207, 194, 157), rgb(252, 212, 152));
+	background-color: #eaf7f9;
   }
   
 .box:hover{

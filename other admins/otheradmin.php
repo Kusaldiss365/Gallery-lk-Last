@@ -43,10 +43,7 @@ if(isset($_POST['user_id'])){
                 </li>
             </ul>
         </div> 
-        <div class="profile">
-            <img class="pic" src="../Src/user2.png">
-            <p class="username">Admin</p>
-        </div>
+
             <div class="inner">
                     <div>
                         <div class="icon"><img src="../Src/admin.png" alt="" class="tip">Other Admin</div>

@@ -84,15 +84,29 @@ ul {
     display: block;
   }
 
+.button1 {
+	display: flex;
+	position: absolute;
+	top: 145px;
+	left: 1250px;
+	border: none;
+	color: red;
+	padding: 20px;
+	text-align: left;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 12px;
+	
+  }
+  
+
 
 .header {
 	width: 100vw;
 	height: 70px;
-	border: 1px solid rgb(68, 29, 29);
-	background-image: linear-gradient(to right, rgb(248, 192, 140) , rgb(241, 169, 121));
-	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	background-color: #222E50;
 
 }
 .profile{
@@ -101,6 +115,7 @@ ul {
 	display:flex ;
 	align-items: flex-start;
 	justify-content: flex-start;
+	background-color: #EDE6F2;
 }
 
 .pic{
@@ -126,7 +141,7 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(187, 162, 162);
+    background-color: #EDE6F2;
 }
 
 
@@ -134,9 +149,9 @@ p{
 	margin-top: 40px;
 	margin-bottom: 20px;
 	width: 1200px;
-	height: 600px;
+	height: auto;
 	padding: 20px 0;
-	background-color: rgb(216, 177, 177);
+	background-color: #0072BB;;
 	border-radius: 10px;
   }
 
@@ -162,7 +177,7 @@ p{
 	height: 250px;
 	margin: 35px 25px;
 	border-radius: 15px;
-	background-color: grey;
+	background-color: #cad4e7;
   }
 
  .image{

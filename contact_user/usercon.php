@@ -7,47 +7,32 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
           crossorigin="anonymous">
-    <link rel="stylesheet" href="user-contacts.css">
+    <link rel="stylesheet" href="usercon.css">
     <script
             src="https://code.jquery.com/jquery-3.6.3.min.js"
             integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
             crossorigin="anonymous"></script>
 </head>
 <body>
+<div class="header">
+            <h1 class="logo"><a href="../home/home.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></h1>
+            <ul class="main-nav1">
+                <li><a href="../home/homepage.php">Home</a></li>
+                <li><a href="../User/user.php">My Account</a></li>
+                    <div class="dropdown">
+                        <button class="dropbtn"><img src="../Src/setting.png" width="25px"></button>
+                        <div class="dropdown1">
+                        <a href="../contact/index.html">Contact Us</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
+<div class="box1">
 <div class="container-fluid">
     <div class="row">
         <div class="col">
-            <nav class="navbar navbar-expand-lg main-nav">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><img src="../Src/Logo.png" width="50px" height="50px"
-                                                          alt=""></a>
-                    <form class="d-flex" role="search">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bolder text-dark">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                   aria-expanded="false">
-                                </a>
-                                <ul class="dropdown-menu">
-                                <li><a href="../contact/index.html">Contact Us</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">My Account</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="">Customer Care</a>
-                            </li>
-
-                        </ul>
-                    </form>
-                </div>
-        </div>
-        </nav>
-    </div>
     <div class="row">
         <div class="col d-flex mt-3 align-items-center">
             
@@ -58,8 +43,8 @@
         <div class="col d-flex align-items-center justify-content-center flex-column">
             <div class="mb-3">
                 <form method="post" >
-                    <input type="text" name="search" class="search-bar" placeholder="Search..." required id="inputid" onkeyup="handleFIlter()">
-                    <input type="button" class="custom-btn" value="Search" onclick="handleFIlter()">
+                    <input type="text" name="search" class="search-bar1" placeholder="Search.." required id="inputid" onkeyup="handleFIlter()">
+                    <input type="button" class="btn btn-warning btn-sm" value="Search" onclick="handleFIlter()">
                 </form>
                 <div class="" id="error"></div>
             </div>
@@ -126,6 +111,7 @@
 </div>
 
 
+</div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

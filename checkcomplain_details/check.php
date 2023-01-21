@@ -8,7 +8,20 @@
     <title>complain details</title>
 </head>
 <body>
-    
+<div class="header">
+            <h1 class="logo"><a href="../home/home.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></h1>
+            <ul class="main-nav">
+                <li><a href="../home/homepage.php">Home</a></li>
+                <li><a href="../User/user.php">My Account</a></li>
+                    <div class="dropdown">
+                        <button class="dropbtn"><img src="../Src/setting.png" width="25px"></button>
+                        <div class="dropdown1">
+                        <a href="../contact/index.html">Contact Us</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
 
     <table class="container">

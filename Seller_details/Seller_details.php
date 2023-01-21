@@ -15,8 +15,7 @@
             <h1 class="logo"><a href="../home/home.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></h1>
             <ul class="main-nav">
                 <li><a href="../home/home.php">Home</a></li>
-                <li><a href="#">My Account</a></li>
-                <li><a href="#">Customer Care</a></li>
+                <li><a href="../User/user.php">My Account</a></li>
                 <li>
                     <div class="dropdown">
                         <button class="dropbtn"><img src="../Src/setting.png" width="25px"></button>

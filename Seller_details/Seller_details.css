@@ -6,8 +6,7 @@ body {
 	line-height: 1.6;
 	margin: 0;
 	min-height: 100vh;
-	background: rgb(2,0,36);
-	background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,130,255,1) 100%);
+	background-color: #EDE6F2;
 }
 
 ul {
@@ -89,11 +88,7 @@ ul {
 .header {
 	width: 100vw;
 	height: 70px;
-	border: 1px solid rgb(68, 29, 29);
-	background-image: linear-gradient(to right, rgb(248, 192, 140) , rgb(241, 169, 121));
-	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	background-color: #222E50;
 }
 
 .profile{
@@ -128,7 +123,7 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(255, 255, 255);
+	background-color: #EDE6F2;
 }
 .inner{
     display: flex;
@@ -139,9 +134,8 @@ p{
 	height: 900px;
 	margin: 50px 0px 35px 25px;
 	border-radius: 15px;
-	background-color: grey;
+	background-color: #0072BB;
 	padding: 30px;
-    border: #ffffff solid 1px;
     
 }
   .box1{

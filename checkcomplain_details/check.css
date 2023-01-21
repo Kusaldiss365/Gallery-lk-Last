@@ -1,13 +1,220 @@
-html,
+* {
+	box-sizing: border-box;
+}
 body {
-	height: 100%;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	min-height: 100vh;
+	background-color: #EDE6F2;
 }
 
-body {
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.logo {
 	margin: 0;
-	background: linear-gradient(45deg, #49a09d, #5f2c82);
-	font-family: sans-serif;
-	font-weight: 100;
+	margin-top: 0;
+}
+
+.main-nav {
+	margin-top: 5px;
+	
+}
+.logo a,.main-nav a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+.main-nav a {
+	color:rgb(255, 255, 255);
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.main-nav a:hover {
+	color: #ca0000;
+}
+.dropbtn {
+    background-color: transparent;
+	margin: 10px;
+    padding: 0px;
+    width: 50px;
+	margin-right: 50px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+ 
+  .dropdown1 {
+    display: none;
+    position: absolute;
+    background-color: rgb(68, 29, 29);
+    font-size: 15px;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(218, 218, 218, 0.2);
+    z-index: 1;
+	border-radius: 5px;
+  }
+  
+
+  .dropdown1 a {
+    color: rgb(110, 89, 89);
+    padding: 0px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown1 a:hover {
+	background-color: #e98383
+}
+  
+  
+  .dropdown:hover .dropdown1 {
+    display: block;
+  }
+
+
+.header {
+	width: 100vw;
+	height: 70px;
+	background-color: #222E50;
+}
+.profile{
+
+	background-color: #EDE6F2;
+	display:flex ;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.pic{
+	
+	margin-left:15px;
+	margin-top: 10px;
+	width: 35px;
+	cursor: pointer;
+	
+}
+.uname{
+	color: rgb(0, 0, 0);
+	height: 25px;
+	cursor: pointer;
+	margin-top: 15px;
+	background-color: #EDE6F2;
+}
+p{
+	color: rgb(0, 0, 0);
+	font-size: 20px;
+	padding-left: 10px;
+}
+.body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	background-image: url(../Src/userback\ \(2\).jpg);
+	height:100vh;
+	background-color: #EDE6F2;
+}
+
+  .row1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+  }
+
+  .row2{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: -50px;
+	width: 100%;
+	height: 100%;
+  }
+
+  .box{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 280px;
+	height: 180px;
+	margin: 70px 25px;
+	border-radius: 10px ;
+	border: solid 2px rgb(56, 12, 12);
+	background-color: #eaf7f9;
+  }
+  
+.box:hover{
+	cursor: pointer;
+	transform: scale(1.1);
+	transition-duration: 1s;
+}
+button{
+	border:0px;
+	border: radius 50%;
+	background-color: transparent;
+	
+  }
+  .text a{
+	text-decoration:none;
+	font-family:auto;
+	color:rgb(112, 0, 0);
+  }
+  .text a:hover{
+	color:rgb(0, 0, 0);
+  }
+ 
+ .text{
+	font-family: Ubuntu;
+	font-size: 25px;
+	font-weight: 900;
+ }
+ .tip{
+	width: 50px;
+ }
+
+.image{
+	width:20%;
+	align-items: center;
+	justify-content: center;	
+	padding-left: 20px;
+}
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+	.header {
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		margin: 0 auto;
+		max-width: 2000px;
+	}
+
+
+}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
 }
 
 .container {
@@ -21,6 +228,7 @@ table {
 	width: 800px;
 	border-collapse: collapse;
 	overflow: hidden;
+	background-color: #eff8f9;
 	box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
@@ -28,38 +236,9 @@ th,
 td {
 	padding: 15px;
 	background-color: rgba(255,255,255,0.2);
-	color: #fff;
+	color: rgb(0, 0, 0);
 }
 
 th {
 	text-align: left;
-}
-
-thead {
-	th {
-		background-color: #55608f;
-	}
-}
-
-tbody {
-	tr {
-		&:hover {
-			background-color: rgba(255,255,255,0.3);
-		}
-	}
-	td {
-		position: relative;
-		&:hover {
-			&:before {
-				content: "";
-				position: absolute;
-				left: 0;
-				right: 0;
-				top: -9999px;
-				bottom: -9999px;
-				background-color: rgba(255,255,255,0.2);
-				z-index: -1;
-			}
-		}
-	}
 }

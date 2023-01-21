@@ -18,14 +18,10 @@
             <ul class="main-nav">
                 <li><a href="../home/homepage.php">Home</a></li>
                 <li><a href="#">My Account</a></li>
-                <li><a href="#">Customer Care</a></li>
                 <li><div class="dropdown">
                     <button class="dropbtn"><img src="../Src/setting.png" width="25px"></button>
                     <div class="dropdown1">
                     <a href="#">Polices</a>
-                      <a href="#">Account Details</a>
-                      <a href="#">Help</a>
-                      <a href="#">Logout</a>
                     </div>
                   </div>
                 </li>
@@ -45,6 +41,10 @@
                             <div class="icon"><img src="../Src/star.png" alt="" class="tip">Favourites</div>
                         </div>
 
+                    <div >
+                    <a href="../User/user.php"><button class="button1" >back</button></a>
+                    </div>
+
         <?php 
             require "../post_ads/db.php";
             $user=$_SESSION['user_id'];
@@ -60,9 +60,9 @@
                 while ($row = mysqli_fetch_assoc($query_run)) {
         ?>
       
-                              <div class="box1">
+                            <div class="box1">
                               <img src="<?php echo $row['img_dir']; ?>" width="200px" height="200px" class="card-img-top" alt="Product Image">
-                                  <div class="text">
+                                <div class="text">
                                       <table>
                                           <tr>
                                               <th>Name </th>
@@ -77,8 +77,8 @@
                                               <td><?php echo $row['price'];  ?></td>
                                           </tr>
                                       </table>
-                                  </div>
-                                  <div class="btn">
+                                </div>
+                                <div class="btn">
                                     <form action="../Favourites/remove.php" method="POST" >
                                     <input type="hidden" name="fav_id" value="<?php echo $row['id'];?>">   
                                       <input  type="submit" class="btn btn-danger btn-sm" style="width:100px" value="Remove"></input>
@@ -88,8 +88,8 @@
                                 <input type="submit" class="btn btn-primary btn-sm" style="width:100px" value="Contact Seller">
                                 </form>
                                 
-                                  </div>
-                              </div>
+                                </div>
+                            </div>
                               
     <?php
 }

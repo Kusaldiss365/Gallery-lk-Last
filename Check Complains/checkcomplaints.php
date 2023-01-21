@@ -15,15 +15,10 @@
             <ul class="main-nav">
                 <li><a href="../home/homepage.php">Home</a></li>
                 <li><a href="#">My Account</a></li>
-                <li><a href="#">Customer Care</a></li>
                 <li><div class="dropdown">
                     <button class="dropbtn"><img src="../Src/setting.png" width="20px"></button>
                     <div class="dropdown1">
                       <a href="../privacy/privacy.php">Polices</a>
-                      <a href="#">Account Details</a>
-                      <a href="../help/help.php">Help</a>
-                      <a href="#">Logout</a>
-                      
                     </div>
                   </div>
                 </li>
@@ -31,7 +26,6 @@
         </div> 
         <div class="profile">
             <img class="pic" src="../Src/user2.png">
-            <p class="username">Admin</p>
         </div>
     </div>
     <div class="body">

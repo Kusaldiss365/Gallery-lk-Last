@@ -150,7 +150,6 @@
         |<a href="../about us/about.php">About us</a>|
         <a href="../contact/index.html">Contact us </a>|
         <a href="../privacy/privacy.php">Privacy & Policy</a>|
-        <a href="../help/help.php">Help</a>|
     </div>
 <script>
     function logout(){
