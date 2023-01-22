@@ -9,23 +9,13 @@
     <title>Seller Details</title>
 </head>
 <body>
-<?php
-include '../config.php';
 
-// $select1 = " SELECT * FROM ads WHERE user_id = '{$userId}'";
-// $result = mysqli_query($conn, $select);
-
-// if(mysqli_num_rows($result) == 1){
-//     $user = mysqli_fetch_assoc($result);
-//     $_SESSION['userid'] = $user['user_id'];}
-// ?>
 <div class="outer">
         <div class="header">
             <h1 class="logo"><a href="../home/home.php"><img src="../Src/Logo.png" width="50px" height="50px"></a></h1>
             <ul class="main-nav">
                 <li><a href="../home/home.php">Home</a></li>
-                <li><a href="#">My Account</a></li>
-                <li><a href="#">Customer Care</a></li>
+                <li><a href="../User/user.php">My Account</a></li>
                 <li>
                     <div class="dropdown">
                         <button class="dropbtn"><img src="../Src/setting.png" width="25px"></button>
@@ -49,7 +39,7 @@ include '../config.php';
 
     $ad_id = $_POST['ad_id'];
     
-    $join = "SELECT adName,firstname,phonenumber,email FROM userdetails INNER JOIN ads ON userdetails.user_id = ads.user_id WHERE ad_id=$ad_id";
+    $join = "SELECT adName,firstname,phonenumber,email,img_dir FROM userdetails INNER JOIN ads ON userdetails.user_id = ads.user_id WHERE ad_id=$ad_id";
     $query_run = mysqli_query($conn, $join);
     $sellerInfo = mysqli_fetch_assoc($query_run);
 ?>
@@ -58,8 +48,12 @@ include '../config.php';
 
         </div>
             <div class="Sellerdiv">
+            <img src="<?php echo $sellerInfo['img_dir']?>" alt="Ad Image" height=200px width=300px>
                 <form action="">
                 <table>
+                        <tr>
+                        </tr>
+                        <tr></tr>
                         <tr>    
                                 <th>Ad Name </th>
                                 <td></td>

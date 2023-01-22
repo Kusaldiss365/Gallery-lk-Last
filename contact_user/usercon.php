@@ -138,7 +138,7 @@
         die("Connection Failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT * FROM users";
+    $sql = "SELECT * FROM userdetails";
     $result = $conn->query($sql);
     $resarray = array();
 

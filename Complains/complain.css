@@ -91,13 +91,7 @@ ul {
 	background-color: #222E50;
 }
 
-.profile{
 
-
-	display:flex ;
-	align-items: flex-start;
-	justify-content: flex-start;
-}
 
 .pic{
 	
@@ -118,27 +112,6 @@ p{
 	padding-left: 10px;
 }
 
-
-.body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-	background-color: #EDE6F2;
-	height: 100vh;
-
-}
-
-.backbtn{
-	background-color: rgb(0, 174, 255);
-	border-style: none;
-	border-radius: 4px;
-	height: 25px;
-	margin-top: 30px;
-	cursor: pointer;
-	position: relative;
-	left:100px;
-	bottom: 20px;
-}
 
 .backbtn a{
  text-decoration: NONE;
@@ -177,10 +150,6 @@ p{
 
 }
 
-  form{
-	background-color: #BCE7FD;
-  }
-
   .box:hover{
 	  cursor: pointer;
 	  transform: scale(1.1);
@@ -218,7 +187,6 @@ p{
 	
 .teaxarea{
 	background:#fbecec;
-	width:500px;
 	font-size:20px;
 	margin:auto;
 }
@@ -242,5 +210,23 @@ input[type="submit"]:hover{
 table{
 	align-items: center;
 	justify-content: center;
+	margin-top: 40px;
+	/* background-color: #0072BB; */
 }
 
+
+.content1{
+	background-color: #EDE6F2;
+	max-width: 450px;
+	height: auto;
+	margin:auto;
+	margin-top: 50px;
+}
+
+select{
+	margin-bottom: 20px;
+}
+
+#selectid{
+	font-weight: bold;
+}

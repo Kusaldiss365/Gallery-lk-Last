@@ -6,6 +6,7 @@ body {
 	line-height: 1.6;
 	margin: 0;
 	min-height: 100vh;
+	background-color: #EDE6F2;
 
 }
 
@@ -32,7 +33,7 @@ ul {
 }
 
 .main-nav a {
-	color:rgb(37, 0, 0);
+	color:rgb(255, 255, 255);
 	font-weight: 600;
 	text-decoration: none;
 }
@@ -88,7 +89,7 @@ ul {
 	display: flex;
 	position: absolute;
 	top: 145px;
-	left: 1250px;
+	right: 200px;
 	border: none;
 	color: red;
 	padding: 20px;
@@ -141,7 +142,8 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #EDE6F2;
+    
+	height: 100%;
 }
 
 
@@ -177,7 +179,7 @@ p{
 	height: 250px;
 	margin: 35px 25px;
 	border-radius: 15px;
-	background-color: #cad4e7;
+	background-color: #EDE6F2;
   }
 
  .image{

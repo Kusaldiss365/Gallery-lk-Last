@@ -32,7 +32,7 @@ ul {
 }
 
 .main-nav a {
-	color:rgb(37, 0, 0);
+	color:rgb(255, 255, 255);
 	font-weight: 600;
 	text-decoration: none;
 }
@@ -174,15 +174,16 @@ table tr th{
     justify-content: flex-start;
 }
  .post .postbtn{
-    background-color: rgb(33, 40, 82);
+    background: rgb(0, 18, 175);
     color: rgb(195, 196, 196);
     width: 100px;
     height: 30px;
     cursor: pointer;
+	border-radius: 6px;
  }
  
  .post .postbtn:hover{
-	background: rgb(0, 18, 175);
+	background: rgb(34, 135, 249);
  }
 
  @media (min-width: 769px) {

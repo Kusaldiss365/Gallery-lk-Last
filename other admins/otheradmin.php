@@ -80,13 +80,13 @@ if(isset($_POST['user_id'])){
                                 <td >
                                 <form action="../contact_admins/conadd.php" method="POST">
                                         <input type="hidden" name='user_id' value="<?php echo $rows['user_id']; ?>">
-                                        <input type="submit" class="favbutton" value="Details">
+                                        <input type="submit" class="buttons-btn1" value="Details">
                                 </form>
                                 </td>
                                 <td>
                                 <form action="../other admins/remove_admin.php" method="POST">
                                         <input type="hidden" name='user_id' value="<?php echo $rows['user_id']; ?>">
-                                        <input type="submit" class="favbutton" value="Remove Admin">
+                                        <input type="submit" class="buttons-btn2" value="Remove Admin">
                                 </form>
                                 </td>  
     

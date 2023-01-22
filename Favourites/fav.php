@@ -61,7 +61,7 @@
         ?>
       
                             <div class="box1">
-                              <img src="<?php echo $row['img_dir']; ?>" width="200px" height="200px" class="card-img-top" alt="Product Image">
+                              <img src="<?php echo $row['img_dir']; ?>" height="200px" width="100px" class="card-img-top" alt="Product Image">
                                 <div class="text">
                                       <table>
                                           <tr>

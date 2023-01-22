@@ -187,9 +187,8 @@ table tr th{
 	height: 470px;
 	margin: 50px 0px 35px 25px;
 	border-radius: 15px;
-	background-color: rgb(248, 171, 171);
+	background-color: #0072BB;
 	padding: 30px;
-    border: #ffffff solid 1px;
 	position: absolute;
     top:10px;
     bottom: 0;
@@ -200,7 +199,7 @@ table tr th{
 }
 
 .backbtn{
-	background-color: rgb(0, 174, 255);
+	background-color: rgb(0, 255, 85);
 	border-style: none;
 	border-radius: 4px;
 	height: 25px;
