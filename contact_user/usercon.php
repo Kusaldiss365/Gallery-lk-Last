@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Contact User</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
           crossorigin="anonymous">
@@ -162,12 +162,12 @@
         var isFound = true;
         filter = input.value.toLowerCase();
         for (i = 0; i < tabledata.length; i++) {
-            if (  (tabledata[i].userId === filter ) || (tabledata[i].userName.toLowerCase().includes(filter)) ) {
+            if (  (tabledata[i].user_id === filter ) || (tabledata[i].username.toLowerCase().includes(filter)) ) {
                 isFound = false;
-                document.getElementById("usernameid").innerText = tabledata[i].userId
-                document.getElementById("firstNameID").innerText = tabledata[i].firstName
-                document.getElementById("lastNameID").innerText = tabledata[i].lastName
-                document.getElementById("mobileNumberID").innerText = tabledata[i].PhoneNumber
+                document.getElementById("usernameid").innerText = tabledata[i].user_id
+                document.getElementById("firstNameID").innerText = tabledata[i].firstname
+                document.getElementById("lastNameID").innerText = tabledata[i].lastname
+                document.getElementById("mobileNumberID").innerText = tabledata[i].phonenumber
             }
         }
         if (isFound){
