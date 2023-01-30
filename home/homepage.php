@@ -83,7 +83,7 @@
             <?php
             require "../post_ads/db.php";
 
-            $query = "SELECT * FROM ads";
+            $query = "SELECT * FROM ads ORDER By ad_id Desc";
             $query_run = mysqli_query($conn, $query);
             $check_ad = mysqli_num_rows($query_run) > 0;
             
